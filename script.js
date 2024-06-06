@@ -17,7 +17,14 @@ const Utils = {
     },
 
     fadeIn: function (element) {
-        if (element == (containerTimer) || (containerBotones3) || (pTextoP)) {
+        if (element === containerTimerGlob ||
+            element === containerBotones3 ||
+            element === pTextoP ||
+            element === containerBotones1 ||
+            element === containerBotones2 ||
+            element === containerBotones3||
+            element === containerBotones2 ||
+                element === containerBotones25){
             element.style.display = 'flex';  // Cambia a block o el display que necesites
         } else {
             element.style.display = 'block';  // Cambia a block o el display que necesites
@@ -79,7 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const maxLeft = sliderContainer.clientWidth - sliderButton.clientWidth;
 
     //Primera Pantalla////////////////////////////////////////////////////////////
-    const iframe = document.getElementById('iframe');
     const pTextoP = document.getElementById('pTextoP');
     const pTextoP2 = document.getElementById('pTextoP2');
     const sliderCont = document.getElementById('sliderCont');
@@ -93,7 +99,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const submit = document.getElementById('submit');
     const copiadoDiv = document.getElementById('copiadoDiv');
     const ultimoBtnNO = document.getElementById('ultimoBtnNO');
+    const BeText = document.getElementById('BeText');
+    const imglogo = document.getElementById('imglogo');
     const principalCont = document.getElementById('principalCont');
+    const segDigits = document.getElementById('segDigits');
+    const mlsDigits = document.getElementById('mlsDigits');
+    const error = document.getElementById('error');
+    const numeroP = document.getElementById('numeroP');
+    const notif = document.getElementById('notif');
+    const textonoti = document.getElementById('textonoti');
 
     const containerBotones1 = document.getElementById('containerBotones1');
 
@@ -135,7 +149,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function fadeIn(element) {
-        if (element == (containerTimer)){
+        if (element === containerTimer ||
+            element === containerBotones1 ||
+            element === containerBotones2 ||
+            element === progressBar ||
+            element === containerBotones25 ||
+            element === tobravesouls ||
+            element === containerBotones3) {
             element.style.display = 'flex';  // Cambia a block o el display que necesites
 
         }else{
@@ -161,7 +181,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (parseInt(sliderButton.style.left, 10) >= maxLeft) {
                 console.log('DESLIZADO');
 
-                fadeOut(iframe);
+                fadeOut(imglogo)
                 fadeOut(sliderCont);
                 fadeOut(omiedo);
                 fadeOut(pTextoP)
@@ -171,9 +191,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 setTimeout(function () {
                     
-                    textRead.innerHTML = "<span id='sabiamos'>SABÍAMOS </span><span id='que1'>QUE </span><span id='dirias'>DIRÍAS </span><span id='que2'>QUE </span><span id='si'>SÍ</span>";
+                    textRead.innerHTML = "<span id='sabiamos'>SABÍAMOS </span><span id='que1'>QUE </span><br><span id='dirias'>DIRÍAS </span><span id='que2'>QUE </span><span id='si'>SÍ</span>";
 
                     setTimeout(function () {
+                        fadeIn(BeText)
                         fadeIn(textRead);
 
                         setTimeout(function () {
@@ -244,20 +265,16 @@ document.addEventListener('DOMContentLoaded', function () {
     setTimeout(() => {
         fadeOut(pTextoP)
         setTimeout(() => {
+            pTextoP.style = "transform: rotate(180deg) scale(-1, 1)"
             pTextoP.innerHTML = "BIENVENIDO"
             fadeIn(pTextoP)
             setTimeout(() => {
                 fadeOut(pTextoP)
                 setTimeout(() => {
-                    pTextoP.style.fontFamily = "gr"
-                    pTextoP.innerHTML = "UNCOMMON"
-                    pTextoP.style.fontSize = "10vh"
-                    pTextoP.style.margin = "0px"
-                    fadeIn(pTextoP)
                     fadeIn(omiedo)
                     setTimeout(() => {
+                        fadeIn(imglogo)
                         fadeIn(sliderContainer)
-                        fadeIn(iframe)
                         fadeIn(tobravesouls)
                     }, 100);
                 }, 1000);
@@ -265,7 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 1000);
     }, 2000);
 
-    let timer = 27;
+    let timer = 30000;
 
     function mostrarQ1(){
         fadeIn(Q1)
@@ -278,53 +295,64 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function moveFirstDivToEnd() {
         let containerTimer = document.querySelector('.containerTimer');
-        let divs = document.querySelectorAll('.num');
 
-        if(timerIsActive){
-            // Aplica la transformación a todos los divs
-            divs.forEach(div => {
-                div.style.transform = `translateX(-10vh)`;
-            });
+        if (timerIsActive) {
 
-            // Espera el tiempo de la animación antes de mover el primer div al final
-            setTimeout(() => {
+            if(timer==25000){
+                textonoti.innerText = "Tic, tac, tic, tac ...."
+                notif.style.top = "2vh"
+                setTimeout(() => {
+                    notif.style.top = "-130vh"
+                }, 3000);
+            }
 
-                if (timer == (-1)) {
-                    divs[0].innerHTML = "";
-                } else {
-                    divs[0].innerHTML = timer;
-                }
+            if (timer == 10000) {
+                textonoti.innerText = "Pilas pilas pues! El tiempo se está acabandoooo" 
+                notif.style.top = "2vh"
+                setTimeout(() => {
+                    notif.style.top = "-130vh"
+                }, 3000);
+            }
 
-                // Mueve el primer div al final del contenedor
-                containerTimer.appendChild(divs[0]);
+            if (timer == 10000) {
+                textonoti.innerText = "Me va a dar algo, métale metaleeee"
+                notif.style.top = "2vh"
+                setTimeout(() => {
+                    notif.style.top = "-130vh"
+                }, 3000);
+            }
 
-                // Resetea las transformaciones
-                divs.forEach(div => {
-                    div.style.transition = 'none'; // Desactiva la transición temporalmente
-                    div.style.transform = 'none';
-                });
+            // Calcula los minutos, segundos y milisegundos
+            let seconds = Math.floor((timer % 60000) / 1000);
+            let milliseconds = Math.floor((timer % 1000) / 10); // Dividir por 10 para tener dos dígitos
 
-                // Fuerza un reflujo para aplicar el cambio inmediatamente
-                containerTimer.offsetHeight;
+            // Formatea los valores para que siempre tengan dos dígitos (excepto milisegundos)
+            let formattedSeconds = seconds.toString().padStart(2, '0');
+            let formattedMilliseconds = milliseconds.toString().padStart(2, '0');
 
-                // Reactiva la transición
-                divs.forEach(div => {
-                    div.style.transition = 'transform 0.5s';
-                });
+            // Actualiza el contenido de los elementos HTML
+            document.getElementById('segDigits').innerHTML = formattedSeconds;
+            document.getElementById('mlsDigits').innerHTML = formattedMilliseconds;
 
-                timer--
+            // Decrementa el timer
+            timer -= 10;
 
-                if (timer === -2) {
-                    clearInterval(intervalId); // Detiene el intervalo cuando timer llega a -2
-                }
-            }, 500); // Debe ser igual a la duración de la transición en CSS
+            // Si el timer llega a 0, detén el cronómetro
+            if (timer <= 0) {
+                timerIsActive = false;
+                clearInterval(intervalId);
+                document.getElementById('mlsDigits').innerHTML = "00";
+            }
         }
     }
-    intervalId = setInterval(moveFirstDivToEnd, 1000); // Llama a moveFirstDivToEnd cada segundo
+
+    // Llama a moveFirstDivToEnd cada 10 milisegundos
+    let intervalId = setInterval(moveFirstDivToEnd, 10);
 });
 
 function mostrarQ2() {
     bar.style.width = "50%"
+    numeroP.innerHTML = "2"
 
     Utils.fadeOut(Q1)
     Utils.fadeOut(containerBotones1)
@@ -335,11 +363,29 @@ function mostrarQ2() {
     }, 1000);
 }
 
-function mostrarQ3() {
-    bar.style.width = "75%"
+function mostrarQ25() {
+    bar.style.width = "80%"
+    numeroP.innerHTML = "3"
 
     Utils.fadeOut(Q2)
     Utils.fadeOut(containerBotones2)
+
+    setTimeout(function () {
+        Utils.fadeIn(Q25)
+        Utils.fadeIn(containerBotones25)
+    }, 1000);
+}
+
+function mostrarQ3() {
+    bar.style.width = "5%"
+    numeroP.innerHTML = "";
+    error.style.marginLeft = "10%";
+    error.style.width = "90%";
+    error.style.color = "#fe0000";
+    error.innerHTML = "OOOPPS! ESTA SE NOS PASÓ ¿ERROR...";
+
+    Utils.fadeOut(Q25)
+    Utils.fadeOut(containerBotones25)
 
     setTimeout(function () {
         Utils.fadeIn(Q3)
@@ -380,6 +426,19 @@ function generateCode(){
     }
 
     return randString
+}
+
+function checarInput(){
+    if(document.getElementById('respuesta').value==''){
+        textonoti.innerText = "Escribe algo en el recuadro"
+        notif.style.top = "2vh"
+        setTimeout(() => {
+            notif.style.top = "-130vh"
+        }, 3000);
+    }else{
+        llenarInput('inputP3', document.getElementById('respuesta').value)
+        mostrarQ4()
+    }
 }
 
 function copyCode(){

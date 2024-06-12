@@ -12,9 +12,10 @@ body {
 }
 
 .principalCont {
+    background-size: contain;
+    background-repeat: no-repeat;
     background-position: center;
-    transition: background-color ease 1s;
-
+    transition: background-color 1s ease, background-image 1s ease;
     width: 100%;
     height: 100vh;
     background-color: #f22a2a;
@@ -41,7 +42,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background-image: url(img/noise.gif);
     background-size: 70px;
     opacity: calc(13 / 100);
@@ -118,6 +119,17 @@ body {
     /* Aplicar la transición de color de 1 segundo */
 }
 
+#tuS,
+#estaS,
+#aS,
+#salvoS,
+#conS,
+#nosotrosS {
+    transition: color 0.4s;
+    /* Aplicar la transición de color de 1 segundo */
+}
+
+
 .TVPCE2S{
     text-align: end;
     z-index: 5;
@@ -125,6 +137,7 @@ body {
     text-align: center;
     display: none;
     
+    white-space: pre;
     position: absolute;
     top: 40vh;
     margin: 0;
@@ -180,14 +193,36 @@ body {
     display: none;
 }
 
+.tuSueno {
+    z-index: 5;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 5vh;
+
+    display: none;
+
+    transition: color ease-in-out 1s;
+    font-family: ocr;
+    font-size: 3.5vh;
+    position: absolute;
+    top: 40%;
+    color: #525252;
+}
+
 .acceptBtn{
     height: 15%;
     width: 40%;
+    position: relative;
+    left: 30%;
     border-radius: 1vh;
-    color: #bdbdbd;
+    color: #f22a2a;
     background-color: transparent;
     border: solid #bdbdbd 0.1vh;
+    animation: blink 1s infinite;
 }
+
+
 
 .omiedo{
     transition: ease 1s;
@@ -220,6 +255,30 @@ body {
     border: solid 0.5vh #161416;
     transition: ease 1s;
     opacity: 0;
+
+    position: absolute;
+    top: -200vh;
+    transition: top linear 0s;
+}
+
+.slider-container2 {
+    background-image: url(img/arrow.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right ;
+    z-index: 5;
+    
+
+    width: 30vh;
+    height: 7vh;
+    background-color: #0e0e0e;
+    border-radius: 100vh;
+    overflow: hidden;
+    border: solid 0.5vh #0e0e0e;
+    transition: ease 1s;
+    opacity: 0;
+    position: absolute;
+    top: -200vh;
 }
 
 .slider-button {
@@ -247,11 +306,13 @@ body {
     display: none;
     width: 30vh;
     height: 13vh;
+    margin-bottom: 5vh;
     height: fit-content;
     position: relative;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    color: #363636;
     flex-direction: column;
     /*margin-bottom: 5vh;*/
 }
@@ -269,7 +330,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    color: #363636;
     /* Superposición oscura */
     pointer-events: none;
     /* Permite hacer clic a través de la superposición */
@@ -281,7 +341,7 @@ body {
     font-size: 10vh;
     margin: 0px;
     height: 9vh;
-    color: #bdbdbd;
+    color: white;
 }
 
 .notif{
@@ -347,24 +407,54 @@ body {
 
 .inputResp {
     background-color: transparent;
-    border: solid transparent 0.2vh;
-    /* Borde transparente al inicio */
-    width: 100%;
+    width: 90%;
     padding: 1vh 2vh 1vh 2vh;
     font-family: mn;
     font-size: 1.26vh;
     color: #bdbdbd;
     height: 5vh;
     outline: none;
+    border: none;
     transition: 0.75s ease-out;
     border-bottom: solid #ffffff 0.2vh;
+    position: relative;
 }
 
-.inputResp:focus {
-    border-color: #fe0000;
-    /* Cambia solo el color del borde */
-    border-radius: 1vh;
+
+
+.inputResp:focus{
     font-size: 2vh;
+    font-weight: 500;
+    font-family: mn;
+    color: #ffffffdd;
+}
+
+.inputResp:focus~.cursorP {
+    display: none;
+}
+
+.cursorP{
+    position: absolute;
+    top: -1.8vh;
+    left: 10px;
+    color: #fe0000;
+    font-size: 3vh;
+    content: "█";
+    animation: blink 1000ms infinite;
+    animation-timing-function: step-start;
+    z-index: 0;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
 
 .inputResp::placeholder {
@@ -378,10 +468,10 @@ body {
 }
 
 .containerQR {
-    background-image: url(img/copyicon.png);
+    background-image: url(img/copycode.png);
+    background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-size: 2.5vh;
-    background-position: top 1vh right 1vh;
 
     display: none;
     justify-content: center;
@@ -390,8 +480,8 @@ body {
     height: fit-content;
     background-color: transparent;
     border-radius: 2vh;
-    padding: 3vh;
-    margin-bottom: 20vh;
+    padding: 4vh;
+    margin-bottom: 0vh;
     z-index: 5;
 }
 
@@ -440,4 +530,37 @@ body {
     height: 25vh;
     position: relative;
     top: 15vh;
+}
+
+#draggablediv {
+    background-image: url(img/beblur.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    border-radius: 3vh;
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 70vh;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    justify-content: center;
+    cursor: grab;
+}
+
+#handle {
+    height: 0.8vh;
+    border-radius: 100vh;
+    width: 40%;
+    margin-top: 2vh;
+    background-color: white;
+    cursor: grab;
+}
+
+#content {
+    height: 97vh;
+    padding: 5vh;
 }

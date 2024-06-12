@@ -23,8 +23,9 @@ const Utils = {
             element === containerBotones1 ||
             element === containerBotones2 ||
             element === containerBotones3||
+            element === draggablediv ||
             element === containerBotones2 ||
-                element === containerBotones25){
+            element === containerBotones25){
             element.style.display = 'flex';  // Cambia a block o el display que necesites
         } else {
             element.style.display = 'block';  // Cambia a block o el display que necesites
@@ -62,10 +63,6 @@ function submitForm() {
                 if (response.ok) {
                     // Si la respuesta es exitosa, mostrar un mensaje de éxito
                     console.log("¡Gracias! ¡Tu formulario se envió correctamente!");
-                    // Recargar la página después de 2 segundos
-                    setTimeout(() => {
-                        window.location.reload();
-                    }, 60000);
                 } else {
                     // Si hay un problema en la respuesta, lanzar un error
                     throw new Error('Error en la solicitud.');
@@ -85,10 +82,15 @@ document.addEventListener('DOMContentLoaded', function () {
     const sliderContainer = document.querySelector('.slider-container');
     const maxLeft = sliderContainer.clientWidth - sliderButton.clientWidth;
 
+    const sliderButton2 = document.getElementById('sliderButton2');
+    const sliderContainer2 = document.querySelector('.slider-container2');
+    const maxLeft2 = sliderContainer2.clientWidth - sliderButton2.clientWidth;
+
     //Primera Pantalla////////////////////////////////////////////////////////////
     const pTextoP = document.getElementById('pTextoP');
     const pTextoP2 = document.getElementById('pTextoP2');
     const sliderCont = document.getElementById('sliderCont');
+    const sliderCont2 = document.getElementById('sliderCont2');
     const omiedo = document.getElementById('omiedo');
     const textRead = document.getElementById('textRead');
     const Q1 = document.getElementById('Q1');
@@ -107,7 +109,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const error = document.getElementById('error');
     const numeroP = document.getElementById('numeroP');
     const notif = document.getElementById('notif');
+    const nomDigS = document.getElementById('nomDigS');
+    const nomDigM = document.getElementById('nomDigM');
     const textonoti = document.getElementById('textonoti');
+    const respuesta = document.getElementById('respuesta');
 
     const containerBotones1 = document.getElementById('containerBotones1');
 
@@ -124,6 +129,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const containerTimerGlob = document.getElementById('containerTimer'); 
 
     let isDragging = false;
+    let isDragging2 = false; // Nuevo para el segundo slider
+
 
     sliderButton.addEventListener('mousedown', startDragging);
     sliderButton.addEventListener('touchstart', startDragging);
@@ -134,10 +141,138 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('mousemove', drag);
     document.addEventListener('touchmove', drag);
 
+    // Funciones para el segundo slider
+    sliderButton2.addEventListener('mousedown', startDragging2);
+    sliderButton2.addEventListener('touchstart', startDragging2);
+
+    document.addEventListener('mouseup', endDragging2);
+    document.addEventListener('touchend', endDragging2);
+
+    document.addEventListener('mousemove', drag2);
+    document.addEventListener('touchmove', drag2);
+
+
+    const draggableDiv = document.getElementById('draggablediv');
+    const handle = document.getElementById('handle');
+    let isDraggingd3 = false;
+    let startY, startTop;
+    const minTop = 10; // equivalent to 10vh
+    const maxTop = window.innerHeight * 0.70; // equivalent to 80vh
+    const proximityThreshold = 20; // proximity threshold in pixels
+
+    handle.addEventListener('mousedown', (e) => {
+        isDraggingd3 = true;
+        startY = e.clientY;
+        startTop = draggableDiv.offsetTop;
+        draggableDiv.style.cursor = 'grabbing';
+        draggableDiv.style.transition = 'none'; // Disable transition while dragging
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (isDraggingd3) {
+            isDraggingd3 = false;
+            draggableDiv.style.cursor = 'grab';
+            draggableDiv.style.transition = 'top 0.2s ease-out'; // Enable transition on release
+
+            const currentTop = draggableDiv.offsetTop;
+            if (currentTop < minTop) {
+                draggableDiv.style.top = '10vh';
+            } else if (currentTop > maxTop) {
+                draggableDiv.style.top = '70vh';
+            } else if (Math.abs(currentTop - minTop) < proximityThreshold) {
+                draggableDiv.style.top = '10vh';
+            } else if (Math.abs(currentTop - maxTop) < proximityThreshold) {
+                draggableDiv.style.top = '70vh';
+            } else {
+                // Snap to the nearest position
+                if (Math.abs(currentTop - minTop) < Math.abs(currentTop - maxTop)) {
+                    draggableDiv.style.top = '10vh';
+                } else {
+                    draggableDiv.style.top = '80vh';
+                }
+            }
+        }
+    });
+
+    document.addEventListener('mousemove', (e) => {
+        if (isDraggingd3) {
+            const dy = e.clientY - startY;
+            const newTop = startTop + dy;
+            if (newTop >= minTop && newTop <= maxTop) {
+                draggableDiv.style.top = `${newTop}px`;
+            }
+        }
+    });
+
+    handle.addEventListener('touchstart', (e) => {
+        isDraggingd3 = true;
+        startY = e.touches[0].clientY;
+        startTop = draggableDiv.offsetTop;
+        draggableDiv.style.cursor = 'grabbing';
+        draggableDiv.style.transition = 'none'; // Disable transition while dragging
+    });
+
+    document.addEventListener('touchend', () => {
+        if (isDraggingd3) {
+            isDraggingd3 = false;
+            draggableDiv.style.cursor = 'grab';
+            draggableDiv.style.transition = 'top 1s ease'; // Enable transition on release
+
+            const currentTop = draggableDiv.offsetTop;
+            if (currentTop < minTop) {
+                draggableDiv.style.top = '10vh';
+            } else if (currentTop > maxTop) {
+                draggableDiv.style.top = '70vh';
+            } else if (Math.abs(currentTop - minTop) < proximityThreshold) {
+                draggableDiv.style.top = '10vh';
+            } else if (Math.abs(currentTop - maxTop) < proximityThreshold) {
+                draggableDiv.style.top = '70vh';
+            } else {
+                // Snap to the nearest position
+                if (Math.abs(currentTop - minTop) < Math.abs(currentTop - maxTop)) {
+                    draggableDiv.style.top = '10vh';
+                } else {
+                    draggableDiv.style.top = '70vh';
+                }
+            }
+        }
+    });
+
+    document.addEventListener('touchmove', (e) => {
+        if (isDraggingd3) {
+            const dy = e.touches[0].clientY - startY;
+            const newTop = startTop + dy;
+            if (newTop >= minTop && newTop <= maxTop) {
+                draggableDiv.style.top = `${newTop}px`;
+            }
+        }
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     function startDragging(e) {
         isDragging = true;
         sliderButton.style.transition = 'none';
     }
+
+    function startDragging2(e) {
+        isDragging2 = true;
+        sliderButton2.style.transition = 'none';
+    }
+    
 
     function fadeOut(element) {
         element.classList.remove('fade-in');
@@ -147,6 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
             element.style.display = 'none';
         },1000);
     }
+    let timer = 30000;
 
     function fadeIn(element) {
         if (element === containerTimer ||
@@ -154,6 +290,7 @@ document.addEventListener('DOMContentLoaded', function () {
             element === containerBotones2 ||
             element === progressBar ||
             element === containerBotones25 ||
+            element === draggablediv ||
             element === tobravesouls ||
             element === containerBotones3) {
             element.style.display = 'flex';  // Cambia a block o el display que necesites
@@ -172,69 +309,102 @@ document.addEventListener('DOMContentLoaded', function () {
         element.classList.add('visible');
     }
 
+    var contInt = 0;
+
     function endDragging(e) {
         if (isDragging) {
-            isDragging = false;
-            sliderButton.style.transition = 'left 0.3s';
-            sliderButton.style.transition = 'background-color 0.5s';
 
-            if (parseInt(sliderButton.style.left, 10) >= maxLeft) {
-                console.log('DESLIZADO');
+            if(contInt==0){
+                isDragging = false;
+                Q1.style.visibility = "visible"
+                progressBar.style.visibility = "visible"
+                progressBar.style.pointerEvents = "all"
+                containerBotones1.style.visibility = "visible"
+                containerBotones1.style.pointerEvents = "all"
+                sliderButton.style.transition = 'left 0.3s';
+                sliderButton.style.transition = 'background-color 0.5s';
 
-                fadeOut(imglogo)
-                fadeOut(sliderCont);
-                fadeOut(omiedo);
-                fadeOut(pTextoP)
-                fadeOut(tobravesouls)
+                if (parseInt(sliderButton.style.left, 10) >= maxLeft) {
+                    console.log('DESLIZADO');
 
-                principalCont.style.backgroundColor="#151515"
+                    fadeOut(imglogo)
+                    fadeOut(sliderCont);
+                    fadeOut(omiedo);
+                    fadeOut(pTextoP)
+                    fadeOut(tobravesouls)
 
-                setTimeout(function () {
-                    
-                    textRead.innerHTML = "<span id='sabiamos'>SABÍAMOS </span><span id='que1'>QUE </span><br><span id='dirias'>DIRÍAS </span><span id='que2'>QUE </span><span id='si'>SÍ</span>";
+                    principalCont.style.backgroundColor = "#151515"
 
                     setTimeout(function () {
-                        fadeIn(BeText)
-                        fadeIn(textRead);
+
+                        textRead.innerHTML = "<span id='sabiamos'>SABÍAMOS </span><span id='que1'>QUE </span><br><span id='dirias'>DIRÍAS </span><span id='que2'>QUE </span><span id='si'>SÍ</span>";
 
                         setTimeout(function () {
-                            document.getElementById('sabiamos').style.color = "#ffffff"
+                            fadeIn(BeText)
+                            fadeIn(textRead);
 
                             setTimeout(function () {
-                                document.getElementById('sabiamos').style.color = "#525252"
-                                document.getElementById('que1').style.color = "#ffffff"
+                                document.getElementById('sabiamos').style.color = "#ffffff"
 
                                 setTimeout(function () {
-                                    document.getElementById('que1').style.color = "#525252"
-                                    document.getElementById('dirias').style.color = "#ffffff"
+                                    document.getElementById('sabiamos').style.color = "#525252"
+                                    document.getElementById('que1').style.color = "#ffffff"
 
                                     setTimeout(function () {
-                                        document.getElementById('dirias').style.color = "#525252"
-                                        document.getElementById('que2').style.color = "#ffffff"
+                                        document.getElementById('que1').style.color = "#525252"
+                                        document.getElementById('dirias').style.color = "#ffffff"
 
                                         setTimeout(function () {
-                                            document.getElementById('que2').style.color = "#525252"
-                                            document.getElementById('si').style.color = "#ffffff"
+                                            document.getElementById('dirias').style.color = "#525252"
+                                            document.getElementById('que2').style.color = "#ffffff"
 
                                             setTimeout(function () {
-                                                document.getElementById('si').style.color = "#525252"
-                                                fadeOut(textRead)
+                                                document.getElementById('que2').style.color = "#525252"
+                                                document.getElementById('si').style.color = "#ffffff"
+
                                                 setTimeout(function () {
-                                                    mostrarQ1();
-                                                }, 1000);
+                                                    document.getElementById('si').style.color = "#525252"
+                                                    fadeOut(textRead)
+                                                    setTimeout(function () {
+                                                        contInt++;
+                                                        mostrarQ1();
+                                                    }, 1000);
+                                                }, 400);
                                             }, 400);
                                         }, 400);
                                     }, 400);
                                 }, 400);
-                            }, 400);
-                        }, 1000);
-                    }, 500);
-                }, 1000);
+                            }, 1000);
+                        }, 500);
+                    }, 1000);
 
 
+
+                } else {
+                    sliderButton.style.left = '0px';
+                }
+            }else{
+                location.reload();
+            }
+        }
+    }
+
+
+    function endDragging2(e) {
+        if (isDragging2) {
+            isDragging2 = false;
+            // Lógica de fin de arrastre para el segundo slider...
+            if (parseInt(sliderButton2.style.left, 10) >= maxLeft2) {
+                console.log('DESLIZADO2');
+                fadeOut(pTextoP);
+                fadeOut(containerQR)
+                fadeOut(sliderContainer2)
+                principalCont.style.backgroundColor = "black"
+                principalCont.style.backgroundImage = "url('img/bggif.gif')"
+                fadeIn(draggablediv)
 
             } else {
-                sliderButton.style.left = '0px';
+                sliderButton2.style.left = '0px';
             }
         }
     }
@@ -260,6 +430,27 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function drag2(e) {
+        if (isDragging2) {
+            const rect = sliderContainer2.getBoundingClientRect();
+            let clientX;
+            if (e.type === 'touchmove') {
+                clientX = e.touches[0].clientX;
+            } else {
+                clientX = e.clientX;
+            }
+            let newLeft = clientX - rect.left - sliderButton2.clientWidth / 2;
+
+            if (newLeft < 0) {
+                newLeft = 0;
+            } else if (newLeft > maxLeft2) {
+                newLeft = maxLeft2;
+            }
+
+            sliderButton2.style.left = newLeft + 'px';
+        }
+    }
+
     fadeIn(pTextoP);
 
     setTimeout(() => {
@@ -274,6 +465,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     fadeIn(omiedo)
                     setTimeout(() => {
                         fadeIn(imglogo)
+                        sliderContainer.style.position = "relative"
+                        sliderContainer.style.top = "10vh"
                         fadeIn(sliderContainer)
                         fadeIn(tobravesouls)
                     }, 100);
@@ -282,7 +475,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 1000);
     }, 2000);
 
-    let timer = 30000;
 
     function mostrarQ1(){
         fadeIn(Q1)
@@ -298,7 +490,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (timerIsActive) {
 
-            if(timer==25000){
+            if(timer==26000){
                 textonoti.innerText = "Tic, tac, tic, tac ...."
                 notif.style.top = "2vh"
                 setTimeout(() => {
@@ -306,7 +498,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }, 3000);
             }
 
-            if (timer == 10000) {
+            if (timer == 16000) {
                 textonoti.innerText = "Pilas pilas pues! El tiempo se está acabandoooo" 
                 notif.style.top = "2vh"
                 setTimeout(() => {
@@ -314,7 +506,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 }, 3000);
             }
 
-            if (timer == 10000) {
+            if (timer == 11000) {
+                textonoti.innerText = "Mucha pensadera, mucha pensaderaaa"
+                notif.style.top = "2vh"
+                setTimeout(() => {
+                    notif.style.top = "-130vh"
+                }, 3000);
+            }
+            
+            if (timer == 6000) {
                 textonoti.innerText = "Me va a dar algo, métale metaleeee"
                 notif.style.top = "2vh"
                 setTimeout(() => {
@@ -342,12 +542,64 @@ document.addEventListener('DOMContentLoaded', function () {
                 timerIsActive = false;
                 clearInterval(intervalId);
                 document.getElementById('mlsDigits').innerHTML = "00";
+
+                fadeOut(Q1)
+                fadeOut(Q2)
+                fadeOut(Q25)
+                fadeOut(Q3)
+                fadeOut(containerBotones1)
+                fadeOut(containerBotones2)
+                fadeOut(containerBotones25)
+                fadeOut(containerBotones3)
+                fadeOut(progressBar)
+                
+                principalCont.style.backgroundColor = "#f22a2a"
+                BeText.style.color = "white"
+
+                containerTimer.style.position = "absolute"
+                containerTimer.style.top = "14vh"
+                containerTimer.style.color = "white"
+
+                nomDigS.style.color = "white"
+                nomDigM.style.color = "white"
+                pTextoP.style = "transform: rotate(0deg) scale(1, 1)"
+                pTextoP.style.fontSize = "2vh"
+                pTextoP.innerHTML = "<img style='height: 1.5vh' src='img/circus.png'> EY, EY EY QUE PASÓ<br><br><span style='color: #ffffffbf'>DESPUÉS NO DIGAS QUE NO TE AVISAMOS</span>"
+                fadeIn(pTextoP)
+                sliderButton.innerHTML = "CANGREJEAR"
+                sliderContainer.style.position = "absolute"
+                sliderContainer.style.top = "60vh"
+                sliderButton.style.left = '0px';
+                omiedo.style.position = "absolute"
+                omiedo.style.top = "64vh"
+                omiedo.style.fontSize = "1.3vh"
+                omiedo.style.color = "#ffffffd0"
+                omiedo.innerHTML = "NO SOMOS TU EX, PERO TE DAMOS<br>OTRA OPORTUNIDAD"
+
+                setTimeout(() => {
+                    fadeIn(sliderContainer)
+                    setTimeout(() => {
+                        fadeIn(omiedo)
+                    }, 100);
+                }, 1000);
             }
         }
     }
 
     // Llama a moveFirstDivToEnd cada 10 milisegundos
     let intervalId = setInterval(moveFirstDivToEnd, 10);
+
+    function verificarInput() {
+        if (respuesta.value === '') {
+            ultimoBtnNO.style.visibility = 'hidden';
+        } else {
+            ultimoBtnNO.style.visibility = 'visible';
+        }
+    }
+
+    verificarInput();
+    respuesta.addEventListener('input', verificarInput);
+
 });
 
 function mostrarQ2() {
@@ -378,7 +630,7 @@ function mostrarQ25() {
 
 function mostrarQ3() {
     bar.style.width = "5%"
-    numeroP.innerHTML = "";
+    numeroP.innerHTML = " ";
     error.style.marginLeft = "10%";
     error.style.width = "90%";
     error.style.color = "#fe0000";
@@ -394,6 +646,7 @@ function mostrarQ3() {
 }
 
 function mostrarQ4() {
+    timerIsActive = false
     ultimoBtnNO.disabled = true
 
     bar.style.width = "100%"
@@ -403,15 +656,74 @@ function mostrarQ4() {
     Utils.fadeOut(containerTimerGlob)
     Utils.fadeOut(progressBar)
     
+    principalCont.style.backgroundColor = "#f22a2a"
+    
+    BeText.style.color = "white"
+    pTextoP.style = "transform: rotate(0deg) scale(1, 1)"
+    pTextoP.style.justifyContent = "center"
+    pTextoP.innerHTML = "<img style='height: 2.5vh' src='img/bomb.png'> CRACK!"
+    Utils.fadeIn(pTextoP)
+
     Qr4.innerHTML = generateCode();
     timerIsActive = false
 
     llenarInput("inputP4", Qr4.innerHTML)
 
     setTimeout(function () {
-        Utils.fadeIn(Q4)
-        Utils.fadeIn(Qr4)
-        Utils.fadeIn(containerQR)
+        Utils.fadeOut(pTextoP)
+        principalCont.style.backgroundColor = "#151515"
+        BeText.style.color = "#616161"
+
+        setTimeout(() => {
+            Utils.fadeIn(Q4)
+            setTimeout(() => {
+                document.getElementById('tuS').style.color = "#ffffff"
+                setTimeout(() => {
+                    document.getElementById('tuS').style.color = "#525252"
+                    document.getElementById('suenoS').style.color = "#ffffff"
+                    setTimeout(() => {
+                        document.getElementById('suenoS').style.color = "#525252"
+                        document.getElementById('estaS').style.color = "#ffffff"
+                        setTimeout(() => {
+                            document.getElementById('estaS').style.color = "#525252"
+                            document.getElementById('aS').style.color = "#ffffff"
+                            setTimeout(() => {
+                                document.getElementById('aS').style.color = "#525252"
+                                document.getElementById('salvoS').style.color = "#ffffff"
+                                setTimeout(() => {
+                                    document.getElementById('salvoS').style.color = "#525252"
+                                    document.getElementById('conS').style.color = "#ffffff"
+                                    setTimeout(() => {
+                                        document.getElementById('conS').style.color = "#525252"
+                                        document.getElementById('nosotrosS').style.color = "#ffffff"
+                                        setTimeout(() => {
+                                            document.getElementById('nosotrosS').style.color = "#525252"
+                                            setTimeout(() => {
+                                                Utils.fadeOut(Q4)
+                                                
+                                                pTextoP.style.top = "25vh"
+                                                pTextoP.innerHTML = "NOS VEMOS PRONTO... GUARDA<br> ESTE CÓDIGO, PUEDE SER LA<br> LLAVE PARA CUMPLIR TU SUEÑO ;)"
+                                                pTextoP.style.fontSize = "1.7vh"
+                                                Utils.fadeIn(pTextoP)
+                                                setTimeout(() => {
+                                                    Utils.fadeIn(containerQR)
+                                                    Utils.fadeIn(Qr4)
+                                                    sliderCont2.style.position = "relative"
+                                                    sliderCont2.style.top = "10vh"
+                                                    setTimeout(() => {
+                                                        Utils.fadeIn(sliderCont2)
+                                                    }, 1000);
+                                                }, 1000);
+                                            }, 400);
+                                        }, 400);
+                                    }, 400);
+                                }, 400);
+                            }, 400);
+                        }, 400);
+                    }, 400);
+                }, 400);
+            }, 400);
+        }, 1000);
     }, 1000);
 
     submit.click();
@@ -428,24 +740,13 @@ function generateCode(){
     return randString
 }
 
-function checarInput(){
-    if(document.getElementById('respuesta').value==''){
-        textonoti.innerText = "Escribe algo en el recuadro"
-        notif.style.top = "2vh"
-        setTimeout(() => {
-            notif.style.top = "-130vh"
-        }, 3000);
-    }else{
-        llenarInput('inputP3', document.getElementById('respuesta').value)
-        mostrarQ4()
-    }
-}
+function copyCode() {
+    Utils.fadeIn(copiadoDiv);
 
-function copyCode(){
-    Utils.fadeIn(copiadoDiv)
+    var qrTexto = Qr4.innerHTML;
 
     var texto = document.createElement("textarea");
-    texto.value = Qr4.innerHTML;
+    texto.value = qrTexto;
     document.body.appendChild(texto);
 
     texto.select();
@@ -455,7 +756,12 @@ function copyCode(){
 
     document.body.removeChild(texto);
 
+    var numeroTelefono = "+528334427876"; // Reemplaza con el número de teléfono deseado
+    var mensaje = encodeURIComponent("¡Hola! Aquí tienes el código: " + qrTexto);
+    var whatsappLink = "https://wa.me/" + numeroTelefono + "?text=" + mensaje;
+    window.open(whatsappLink);
+
     setTimeout(() => {
-        Utils.fadeOut(copiadoDiv)
+        Utils.fadeOut(copiadoDiv);
     }, 1500);
 }

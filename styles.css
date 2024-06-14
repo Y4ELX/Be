@@ -160,6 +160,18 @@ body {
     border-left: solid 0.2vh #f22a2a;
 }
 
+.imglogo{
+    width: 70%;
+    padding-top: 20vh;
+    display: none;
+}
+
+@media only screen and (min-width: 900px) {
+    .imglogo {
+        width: 40%;
+    }
+}
+
 #avisamosDSP::after {
     content: '|';
     display: inline-block;

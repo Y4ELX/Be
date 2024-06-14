@@ -161,10 +161,8 @@ body {
 }
 
 #avisamosDSP::after {
-    content: '█';
-    /* Carácter del cursor */
+    content: '|';
     display: inline-block;
-    /* Animación de parpadeo */
     animation-timing-function: step-start;
 }
 

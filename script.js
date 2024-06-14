@@ -1,1 +1,871 @@
-const _0xa9476b=_0x3897;(function(_0x391ea7,_0x2a1d77){const _0x1cdc5b=_0x3897,_0x5b82b4=_0x391ea7();while(!![]){try{const _0x49b8cb=parseInt(_0x1cdc5b(0x140))/0x1*(-parseInt(_0x1cdc5b(0x1c5))/0x2)+-parseInt(_0x1cdc5b(0x1e2))/0x3+-parseInt(_0x1cdc5b(0x14f))/0x4+parseInt(_0x1cdc5b(0x158))/0x5*(parseInt(_0x1cdc5b(0x1e7))/0x6)+parseInt(_0x1cdc5b(0x1b9))/0x7+-parseInt(_0x1cdc5b(0x1df))/0x8+parseInt(_0x1cdc5b(0x18e))/0x9;if(_0x49b8cb===_0x2a1d77)break;else _0x5b82b4['push'](_0x5b82b4['shift']());}catch(_0x4dc3c4){_0x5b82b4['push'](_0x5b82b4['shift']());}}}(_0x1382,0x95a73));const containerTimer=document[_0xa9476b(0x1c9)](_0xa9476b(0x1c7));var timerIsActive=![];function _0x1382(){const _0xb7ef2b=['25345467LnjAAZ','relax','que1','fade-out','clientWidth','notif','fontSize','remove','ABCDEFGHJKMNPQRST23456789abcdefghjkmnopqrst','ultimoBtnNO','sliderCont3','padStart','none','2vh','BIENVENIDO','OOOPPS!\x20ESTA\x20SE\x20NOS\x20PASÓ\x20¿ERROR...','backgroundColor','visibility','error','style','100%','iguser','¡Gracias!\x20¡Tu\x20formulario\x20se\x20envió\x20correctamente!','imglogo','random','getBoundingClientRect','textonoti','createElement','?text=','addEventListener','textRead','.slider-container3','NOS\x20VEMOS\x20PRONTO...\x20GUARDA<br>\x20ESTE\x20CÓDIGO,\x20PUEDE\x20SER\x20LA<br>\x20LLAVE\x20PARA\x20CUMPLIR\x20TU\x20SUEÑO\x20;)','clientY','innerText','-200vh','que2','left','pointerEvents','transform:\x20rotate(180deg)\x20scale(-1,\x201)','touchmove','type','draggablediv','197631nuTOJD','.slider-container2','touchstart','numeroP','center','<img\x20style=\x27height:\x201.5vh\x27\x20src=\x27img/circus.png\x27>\x20EY,\x20EY\x20EY\x20QUE\x20PASÓ<br><br><span\x20style=\x27color:\x20#ffffffbf\x27\x20id=\x27avisamosDSP\x27></span>','fadeOut','relative','sliderCont','execCommand','containerBotones2','inputP4','4982POOPGQ','hidden','.containerTimer','blinking','querySelector','grabbing','+528334427876','containerQR','handle','containerBotones1','visible','DESPUÉS\x20NO\x20DIGAS\x20QUE\x20NO\x20TE\x20AVISAMOS','floor','all','14vh','10vh','1.3vh','DESLIZADO2','Tic,\x20tac,\x20tic,\x20tac\x20....','containerBotones4','#616161','length','sliderButton2','omiedo','input','offsetWidth','368416weflXV','#f22a2a','mousemove','3626250gGLgCe','70vh','mouseup','cursor','-130vh','129486LaZRtd','DESLIZADO3','setSelectionRange','charAt','textarea','suenoS','estaS','body','mousedown','contact-form','¡Hola!\x20Aquí\x20tienes\x20el\x20código:\x20','respuesta','#ffffff','inputP5','64vh','top','salvoS','163UPExzK','¡Error!','DOMContentLoaded','position','mlsDigits','catch','clientX','black','NO\x20SOMOS\x20TU\x20EX,\x20PERO\x20TE\x20DAMOS<br>OTRA\x20OPORTUNIDAD','preventDefault','removeChild','nosotrosS','url(\x27img/bggif.gif\x27)','¡Ha\x20ocurrido\x20un\x20error\x20al\x20enviar\x20el\x20formulario!','conS','4181456WPYIYg','innerHeight','background-color\x200.5s','Mucha\x20pensadera,\x20mucha\x20pensaderaaa','50%','add','justifyContent','fadeIn','left\x200.3s','110hQbtOm','appendChild','touchend','disabled','toString','top\x201s\x20ease','width','grab','<span\x20id=\x27sabiamos\x27>SABÍAMOS\x20</span><span\x20id=\x27que1\x27>QUE\x20</span><br><span\x20id=\x27dirias\x27>DIRÍAS\x20</span><span\x20id=\x27que2\x27>QUE\x20</span><span\x20id=\x27si\x27>SÍ</span>','fade-in','principalCont','select','click','submit','#151515','nomDigM','transition','display','60vh','touches','top\x200.2s\x20ease-out','pTextoP','log','Error\x20en\x20la\x20solicitud.','containerBotones3','color','POST','<img\x20style=\x27height:\x202.5vh\x27\x20src=\x27img/bomb.png\x27>\x20CRACK!','abs','offsetTop','dirias','CANGREJEAR','marginLeft','avisamosDSP','nomDigS','80%','white','75vh','sabiamos','block','getElementById','absolute','0px','slice','value','segDigits','sliderButton','progressBar','#525252','backgroundImage','tuS','innerHTML','classList','sliderCont2'];_0x1382=function(){return _0xb7ef2b;};return _0x1382();}function llenarInput(_0x2f197f,_0x184435){const _0x1b0fe1=_0xa9476b;document[_0x1b0fe1(0x180)](_0x2f197f)[_0x1b0fe1(0x184)]=_0x184435;}function _0x3897(_0x3478db,_0x5240c8){const _0x13825f=_0x1382();return _0x3897=function(_0x3897ef,_0x2552a9){_0x3897ef=_0x3897ef-0x136;let _0x8945c5=_0x13825f[_0x3897ef];return _0x8945c5;},_0x3897(_0x3478db,_0x5240c8);}const Utils={'fadeOut':function(_0x4dbb98){const _0x36211b=_0xa9476b;_0x4dbb98[_0x36211b(0x18c)]['remove'](_0x36211b(0x161)),_0x4dbb98[_0x36211b(0x18c)][_0x36211b(0x154)](_0x36211b(0x191),_0x36211b(0x1c6)),setTimeout(function(){const _0x1a67e0=_0x36211b;_0x4dbb98['style'][_0x1a67e0(0x169)]=_0x1a67e0(0x19a);},0x3e8);},'fadeIn':function(_0x52072b){const _0x36d7f5=_0xa9476b;_0x52072b===containerTimerGlob||_0x52072b===containerBotones3||_0x52072b===pTextoP||_0x52072b===containerBotones1||_0x52072b===containerBotones2||_0x52072b===containerBotones3||_0x52072b===draggablediv||_0x52072b===containerBotones2||_0x52072b===IgBar||_0x52072b===containerBotones25?_0x52072b['style'][_0x36d7f5(0x169)]='flex':_0x52072b[_0x36d7f5(0x1a1)][_0x36d7f5(0x169)]='block',_0x52072b[_0x36d7f5(0x18c)][_0x36d7f5(0x154)](_0x36d7f5(0x161)),_0x52072b[_0x36d7f5(0x18c)]['remove'](_0x36d7f5(0x191)),_0x52072b[_0x36d7f5(0x18c)][_0x36d7f5(0x195)](_0x36d7f5(0x1c6)),_0x52072b[_0x36d7f5(0x1de)],_0x52072b[_0x36d7f5(0x18c)][_0x36d7f5(0x154)](_0x36d7f5(0x1cf));}};document[_0xa9476b(0x1ab)](_0xa9476b(0x142),function(){const _0x34af29=_0xa9476b,_0x1d18e8=document['forms'][_0x34af29(0x138)],_0x4f0874='https://script.google.com/macros/s/AKfycbyQZbHranPSYBTAsPN7lJYv_mkysEVvLya-xu6F_Q1nzICSfl533ik4Jz9fZpNo85kB/exec';function _0x5a0dac(_0x1115b5){const _0x1a1bba=_0x34af29;_0x1115b5[_0x1a1bba(0x149)]();const _0x58c60a=new FormData(_0x1d18e8);fetch(_0x4f0874,{'method':_0x1a1bba(0x172),'body':_0x58c60a})['then'](_0x5a6556=>{const _0x374f5c=_0x1a1bba;if(_0x5a6556['ok'])console[_0x374f5c(0x16e)](_0x374f5c(0x1a4));else throw new Error(_0x374f5c(0x16f));})[_0x1a1bba(0x145)](_0x486088=>{const _0x1f820a=_0x1a1bba;console['error'](_0x1f820a(0x141),_0x486088),alert(_0x1f820a(0x14d));});}_0x1d18e8[_0x34af29(0x1ab)](_0x34af29(0x165),_0x5a0dac);}),document['addEventListener']('DOMContentLoaded',function(){const _0x4cf4fe=_0xa9476b,_0x57d539=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x186)),_0x340474=document[_0x4cf4fe(0x1c9)]('.slider-container'),_0x2fce27=_0x340474['clientWidth']-_0x57d539[_0x4cf4fe(0x192)],_0x3f561b=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x1db)),_0x3d6d0d=document[_0x4cf4fe(0x1c9)](_0x4cf4fe(0x1ba)),_0xa66ec2=_0x3d6d0d[_0x4cf4fe(0x192)]-_0x3f561b[_0x4cf4fe(0x192)],_0x48a85f=document[_0x4cf4fe(0x180)]('sliderButton3'),_0x181efa=document[_0x4cf4fe(0x1c9)](_0x4cf4fe(0x1ad)),_0x12a7a0=_0x181efa[_0x4cf4fe(0x192)]-_0x48a85f[_0x4cf4fe(0x192)],_0x4cfc26=document['getElementById'](_0x4cf4fe(0x16d)),_0x1fba13=document[_0x4cf4fe(0x180)]('pTextoP2'),_0x512435=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x1c1)),_0x209383=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x18d)),_0x24ec5f=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x198)),_0x1028ed=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x1dc)),_0x34d984=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x1ac)),_0x3cca7e=document['getElementById']('Q1'),_0x2753ba=document['getElementById'](_0x4cf4fe(0x187)),_0x3ddcc1=document['querySelector'](_0x4cf4fe(0x1c7)),_0x2fbf82=document[_0x4cf4fe(0x180)]('bar'),_0x50f8b5=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x1cc)),_0x5b05dd=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x165)),_0x4973a8=document[_0x4cf4fe(0x180)]('copiadoDiv'),_0x2b4501=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x197)),_0x3120e3=document[_0x4cf4fe(0x180)]('BeText'),_0x37043f=document['getElementById'](_0x4cf4fe(0x1a5)),_0x30def9=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x162)),_0x5a92ed=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x185)),_0x171828=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x144)),_0x48634f=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x1a0)),_0x469d3d=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x1bc)),_0x5cc6c8=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x193)),_0x31ca60=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x17a)),_0x1b53f6=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x167)),_0x1fb1f1=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x1a8)),_0x2635cd=document['getElementById'](_0x4cf4fe(0x13a)),_0x1b846a=document['getElementById']('IgBar'),_0x2dc44d=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x1a3)),_0x5c43e0=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x18f)),_0x55903e=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x1ce)),_0x339f9b=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x1c3)),_0x345d7b=document['getElementById']('Q2'),_0x19eb5c=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x170)),_0x19aa75=document[_0x4cf4fe(0x180)]('Q3'),_0x441b1d=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x1d8)),_0x3e122c=document['getElementById']('Q4'),_0x41db56=document[_0x4cf4fe(0x180)]('Qr4'),_0x21a426=document['getElementById']('containerTimer');let _0x1104ff=![],_0x4824a1=![],_0x358191=![];_0x57d539['addEventListener'](_0x4cf4fe(0x137),_0x1b99bb),_0x57d539['addEventListener'](_0x4cf4fe(0x1bb),_0x1b99bb),document[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x1e4),_0x360f7e),document[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x15a),_0x360f7e),document[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x1e1),_0x1abbfa),document[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x1b6),_0x1abbfa),_0x3f561b[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x137),_0x478f51),_0x3f561b['addEventListener']('touchstart',_0x478f51),document[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x1e4),_0xbf0a02),document[_0x4cf4fe(0x1ab)]('touchend',_0xbf0a02),document[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x1e1),_0x9ff34b),document[_0x4cf4fe(0x1ab)]('touchmove',_0x9ff34b),_0x48a85f['addEventListener'](_0x4cf4fe(0x137),_0x214566),_0x48a85f[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x1bb),_0x214566),document[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x1e4),_0x182172),document['addEventListener'](_0x4cf4fe(0x15a),_0x182172),document['addEventListener'](_0x4cf4fe(0x1e1),_0x4bf48c),document[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x1b6),_0x4bf48c);const _0x5e4011=document['getElementById'](_0x4cf4fe(0x1b8)),_0x148812=document[_0x4cf4fe(0x180)](_0x4cf4fe(0x1cd));let _0x14d2a1=![],_0x60219,_0x418c28;const _0x2468fe=0xa,_0x207e8d=window[_0x4cf4fe(0x150)]*0.7,_0x332837=0x14;_0x148812[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x137),_0x1959f4=>{const _0xaaf6ba=_0x4cf4fe;_0x14d2a1=!![],_0x60219=_0x1959f4[_0xaaf6ba(0x1af)],_0x418c28=_0x5e4011[_0xaaf6ba(0x175)],_0x5e4011[_0xaaf6ba(0x1a1)][_0xaaf6ba(0x1e5)]=_0xaaf6ba(0x1ca),_0x5e4011['style'][_0xaaf6ba(0x168)]='none';}),document[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x1e4),()=>{const _0x435b4f=_0x4cf4fe;if(_0x14d2a1){_0x14d2a1=![],_0x5e4011['style'][_0x435b4f(0x1e5)]=_0x435b4f(0x15f),_0x5e4011[_0x435b4f(0x1a1)][_0x435b4f(0x168)]=_0x435b4f(0x16c);const _0x3c1589=_0x5e4011['offsetTop'];if(_0x3c1589<_0x2468fe)_0x5e4011[_0x435b4f(0x1a1)][_0x435b4f(0x13e)]='10vh';else{if(_0x3c1589>_0x207e8d)_0x5e4011[_0x435b4f(0x1a1)]['top']=_0x435b4f(0x1e3);else{if(Math[_0x435b4f(0x174)](_0x3c1589-_0x2468fe)<_0x332837)_0x5e4011[_0x435b4f(0x1a1)][_0x435b4f(0x13e)]=_0x435b4f(0x1d4);else Math[_0x435b4f(0x174)](_0x3c1589-_0x207e8d)<_0x332837?_0x5e4011[_0x435b4f(0x1a1)][_0x435b4f(0x13e)]=_0x435b4f(0x1e3):Math[_0x435b4f(0x174)](_0x3c1589-_0x2468fe)<Math[_0x435b4f(0x174)](_0x3c1589-_0x207e8d)?_0x5e4011[_0x435b4f(0x1a1)][_0x435b4f(0x13e)]=_0x435b4f(0x1d4):_0x5e4011[_0x435b4f(0x1a1)][_0x435b4f(0x13e)]='80vh';}}}}),document[_0x4cf4fe(0x1ab)]('mousemove',_0x1a9558=>{const _0x299b00=_0x4cf4fe;if(_0x14d2a1){const _0x1034e6=_0x1a9558['clientY']-_0x60219,_0x171e42=_0x418c28+_0x1034e6;_0x171e42>=_0x2468fe&&_0x171e42<=_0x207e8d&&(_0x5e4011[_0x299b00(0x1a1)][_0x299b00(0x13e)]=_0x171e42+'px');}}),_0x148812[_0x4cf4fe(0x1ab)]('touchstart',_0x364f7c=>{const _0x1665e3=_0x4cf4fe;_0x14d2a1=!![],_0x60219=_0x364f7c[_0x1665e3(0x16b)][0x0][_0x1665e3(0x1af)],_0x418c28=_0x5e4011[_0x1665e3(0x175)],_0x5e4011['style'][_0x1665e3(0x1e5)]='grabbing',_0x5e4011[_0x1665e3(0x1a1)][_0x1665e3(0x168)]=_0x1665e3(0x19a);}),document[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x15a),()=>{const _0x2d6412=_0x4cf4fe;if(_0x14d2a1){_0x14d2a1=![],_0x5e4011[_0x2d6412(0x1a1)][_0x2d6412(0x1e5)]='grab',_0x5e4011[_0x2d6412(0x1a1)][_0x2d6412(0x168)]=_0x2d6412(0x15d);const _0x435e2f=_0x5e4011['offsetTop'];if(_0x435e2f<_0x2468fe)_0x5e4011[_0x2d6412(0x1a1)]['top']=_0x2d6412(0x1d4);else{if(_0x435e2f>_0x207e8d)_0x5e4011[_0x2d6412(0x1a1)]['top']=_0x2d6412(0x1e3);else{if(Math[_0x2d6412(0x174)](_0x435e2f-_0x2468fe)<_0x332837)_0x5e4011[_0x2d6412(0x1a1)][_0x2d6412(0x13e)]='10vh';else Math['abs'](_0x435e2f-_0x207e8d)<_0x332837?_0x5e4011[_0x2d6412(0x1a1)][_0x2d6412(0x13e)]=_0x2d6412(0x1e3):Math['abs'](_0x435e2f-_0x2468fe)<Math[_0x2d6412(0x174)](_0x435e2f-_0x207e8d)?_0x5e4011[_0x2d6412(0x1a1)][_0x2d6412(0x13e)]=_0x2d6412(0x1d4):_0x5e4011[_0x2d6412(0x1a1)][_0x2d6412(0x13e)]=_0x2d6412(0x1e3);}}}}),document[_0x4cf4fe(0x1ab)](_0x4cf4fe(0x1b6),_0x1056b1=>{const _0x4be188=_0x4cf4fe;if(_0x14d2a1){const _0x1ae6da=_0x1056b1['touches'][0x0][_0x4be188(0x1af)]-_0x60219,_0x407f59=_0x418c28+_0x1ae6da;_0x407f59>=_0x2468fe&&_0x407f59<=_0x207e8d&&(_0x5e4011[_0x4be188(0x1a1)][_0x4be188(0x13e)]=_0x407f59+'px');}});function _0x1b99bb(_0x323eb6){const _0xccceb2=_0x4cf4fe;_0x1104ff=!![],_0x57d539[_0xccceb2(0x1a1)]['transition']=_0xccceb2(0x19a);}function _0x478f51(_0x5ea435){const _0x129091=_0x4cf4fe;_0x4824a1=!![],_0x3f561b[_0x129091(0x1a1)]['transition']='none';}function _0x214566(_0x2efab2){const _0x2f7d7a=_0x4cf4fe;_0x358191=!![],_0x48a85f['style']['transition']=_0x2f7d7a(0x19a);}function _0xccbf7c(_0x43669b){const _0x95b17e=_0x4cf4fe;_0x43669b[_0x95b17e(0x18c)][_0x95b17e(0x195)](_0x95b17e(0x161)),_0x43669b['classList']['add'](_0x95b17e(0x191),_0x95b17e(0x1c6)),setTimeout(function(){const _0x146141=_0x95b17e;_0x43669b[_0x146141(0x1a1)][_0x146141(0x169)]='none';},0x3e8);}let _0x51bd49=0x7530;function _0x5e7998(_0x4a8cc3){const _0x751315=_0x4cf4fe;_0x4a8cc3===_0x3ddcc1||_0x4a8cc3===_0x55903e||_0x4a8cc3===_0x339f9b||_0x4a8cc3===_0x2753ba||_0x4a8cc3===containerBotones25||_0x4a8cc3===draggablediv||_0x4a8cc3===tobravesouls||_0x4a8cc3===_0x19eb5c?_0x4a8cc3['style'][_0x751315(0x169)]='flex':_0x4a8cc3[_0x751315(0x1a1)]['display']=_0x751315(0x17f),_0x4a8cc3[_0x751315(0x18c)][_0x751315(0x154)](_0x751315(0x161)),_0x4a8cc3[_0x751315(0x18c)][_0x751315(0x195)](_0x751315(0x191)),_0x4a8cc3[_0x751315(0x18c)]['remove'](_0x751315(0x1c6)),_0x4a8cc3[_0x751315(0x1de)],_0x4a8cc3['classList'][_0x751315(0x154)]('visible');}var _0x56705d=0x0;function _0x360f7e(_0x567370){const _0x1f9237=_0x4cf4fe;_0x1104ff&&(_0x56705d==0x0?(_0x1104ff=![],_0x3cca7e[_0x1f9237(0x1a1)][_0x1f9237(0x19f)]=_0x1f9237(0x1cf),_0x2753ba[_0x1f9237(0x1a1)]['visibility']=_0x1f9237(0x1cf),_0x2753ba[_0x1f9237(0x1a1)][_0x1f9237(0x1b4)]=_0x1f9237(0x1d2),_0x55903e[_0x1f9237(0x1a1)][_0x1f9237(0x19f)]=_0x1f9237(0x1cf),_0x55903e[_0x1f9237(0x1a1)]['pointerEvents']='all',_0x57d539['style']['transition']=_0x1f9237(0x157),_0x57d539[_0x1f9237(0x1a1)]['transition']=_0x1f9237(0x151),parseInt(_0x57d539[_0x1f9237(0x1a1)][_0x1f9237(0x1b3)],0xa)>=_0x2fce27?(console[_0x1f9237(0x16e)]('DESLIZADO'),_0xccbf7c(_0x37043f),_0xccbf7c(_0x512435),_0xccbf7c(_0x1028ed),_0xccbf7c(_0x4cfc26),_0xccbf7c(tobravesouls),_0x30def9['style'][_0x1f9237(0x19e)]=_0x1f9237(0x166),setTimeout(function(){const _0xc1d746=_0x1f9237;_0x34d984[_0xc1d746(0x18b)]=_0xc1d746(0x160),setTimeout(function(){_0x5e7998(_0x3120e3),_0x5e7998(_0x34d984),setTimeout(function(){const _0x5f4447=_0x3897;document[_0x5f4447(0x180)](_0x5f4447(0x17e))['style'][_0x5f4447(0x171)]='#ffffff',setTimeout(function(){const _0x14532c=_0x5f4447;document[_0x14532c(0x180)](_0x14532c(0x17e))[_0x14532c(0x1a1)][_0x14532c(0x171)]=_0x14532c(0x188),document['getElementById'](_0x14532c(0x190))[_0x14532c(0x1a1)][_0x14532c(0x171)]='#ffffff',setTimeout(function(){const _0x28c6f4=_0x14532c;document[_0x28c6f4(0x180)](_0x28c6f4(0x190))[_0x28c6f4(0x1a1)][_0x28c6f4(0x171)]=_0x28c6f4(0x188),document[_0x28c6f4(0x180)](_0x28c6f4(0x176))[_0x28c6f4(0x1a1)][_0x28c6f4(0x171)]='#ffffff',setTimeout(function(){const _0x5181f4=_0x28c6f4;document[_0x5181f4(0x180)](_0x5181f4(0x176))[_0x5181f4(0x1a1)]['color']='#525252',document[_0x5181f4(0x180)]('que2')[_0x5181f4(0x1a1)][_0x5181f4(0x171)]=_0x5181f4(0x13b),setTimeout(function(){const _0x5f0dc1=_0x5181f4;document['getElementById'](_0x5f0dc1(0x1b2))['style']['color']=_0x5f0dc1(0x188),document[_0x5f0dc1(0x180)]('si')[_0x5f0dc1(0x1a1)][_0x5f0dc1(0x171)]=_0x5f0dc1(0x13b),setTimeout(function(){const _0x1e3dc3=_0x5f0dc1;document[_0x1e3dc3(0x180)]('si')[_0x1e3dc3(0x1a1)][_0x1e3dc3(0x171)]=_0x1e3dc3(0x188),_0xccbf7c(_0x34d984),setTimeout(function(){_0x56705d++,_0x24ad78();},0x3e8);},0x190);},0x190);},0x190);},0x190);},0x190);},0x3e8);},0x1f4);},0x3e8)):_0x57d539['style'][_0x1f9237(0x1b3)]=_0x1f9237(0x182)):location['reload']());}function _0xbf0a02(_0x575119){const _0x5483f1=_0x4cf4fe;_0x4824a1&&(_0x4824a1=![],parseInt(_0x3f561b[_0x5483f1(0x1a1)][_0x5483f1(0x1b3)],0xa)>=_0xa66ec2?(console[_0x5483f1(0x16e)](_0x5483f1(0x1d6)),_0xccbf7c(_0x5c43e0),_0xccbf7c(_0x4cfc26),_0xccbf7c(_0x1b846a),_0xccbf7c(_0x50f8b5),_0xccbf7c(_0x3d6d0d),_0x30def9['style'][_0x5483f1(0x19e)]=_0x5483f1(0x147),_0x30def9[_0x5483f1(0x1a1)]['backgroundImage']=_0x5483f1(0x14c),_0x5e7998(draggablediv)):_0x3f561b[_0x5483f1(0x1a1)][_0x5483f1(0x1b3)]=_0x5483f1(0x182));}function _0x182172(_0x33782f){const _0x1375d9=_0x4cf4fe;_0x358191&&(_0x358191=![],parseInt(_0x48a85f[_0x1375d9(0x1a1)][_0x1375d9(0x1b3)],0xa)>=_0x12a7a0?(console['log'](_0x1375d9(0x1e8)),llenarInput(_0x1375d9(0x13c),_0x2dc44d['value']),_0x5b05dd[_0x1375d9(0x164)](),_0xccbf7c(_0x5c43e0),_0xccbf7c(_0x1b846a),_0xccbf7c(_0x209383),_0xccbf7c(_0x4cfc26),_0xccbf7c(_0x50f8b5),_0xccbf7c(_0x181efa),_0x30def9[_0x1375d9(0x1a1)][_0x1375d9(0x19e)]='black',_0x30def9['style'][_0x1375d9(0x189)]=_0x1375d9(0x14c),_0x5e7998(draggablediv)):_0x48a85f[_0x1375d9(0x1a1)][_0x1375d9(0x1b3)]=_0x1375d9(0x182));}function _0x4bf48c(_0x4f92df){const _0xbef2de=_0x4cf4fe;if(_0x358191){const _0x1391e2=_0x181efa[_0xbef2de(0x1a7)]();let _0x5a1d1d;_0x4f92df['type']===_0xbef2de(0x1b6)?_0x5a1d1d=_0x4f92df[_0xbef2de(0x16b)][0x0][_0xbef2de(0x146)]:_0x5a1d1d=_0x4f92df['clientX'];let _0x2598a1=_0x5a1d1d-_0x1391e2[_0xbef2de(0x1b3)]-_0x48a85f[_0xbef2de(0x192)]/0x2;if(_0x2598a1<0x0)_0x2598a1=0x0;else _0x2598a1>_0x12a7a0&&(_0x2598a1=_0x12a7a0);_0x48a85f['style'][_0xbef2de(0x1b3)]=_0x2598a1+'px';}}function _0x1abbfa(_0x50c6c6){const _0x30429a=_0x4cf4fe;if(_0x1104ff){const _0x1e8db8=_0x340474[_0x30429a(0x1a7)]();let _0x187cf6;_0x50c6c6[_0x30429a(0x1b7)]===_0x30429a(0x1b6)?_0x187cf6=_0x50c6c6[_0x30429a(0x16b)][0x0][_0x30429a(0x146)]:_0x187cf6=_0x50c6c6[_0x30429a(0x146)];let _0x230865=_0x187cf6-_0x1e8db8[_0x30429a(0x1b3)]-_0x57d539[_0x30429a(0x192)]/0x2;if(_0x230865<0x0)_0x230865=0x0;else _0x230865>_0x2fce27&&(_0x230865=_0x2fce27);_0x57d539[_0x30429a(0x1a1)][_0x30429a(0x1b3)]=_0x230865+'px';}}function _0x9ff34b(_0x328f0){const _0x33698d=_0x4cf4fe;if(_0x4824a1){const _0x175373=_0x3d6d0d[_0x33698d(0x1a7)]();let _0x26fc43;_0x328f0[_0x33698d(0x1b7)]==='touchmove'?_0x26fc43=_0x328f0[_0x33698d(0x16b)][0x0][_0x33698d(0x146)]:_0x26fc43=_0x328f0[_0x33698d(0x146)];let _0x595844=_0x26fc43-_0x175373[_0x33698d(0x1b3)]-_0x3f561b[_0x33698d(0x192)]/0x2;if(_0x595844<0x0)_0x595844=0x0;else _0x595844>_0xa66ec2&&(_0x595844=_0xa66ec2);_0x3f561b['style'][_0x33698d(0x1b3)]=_0x595844+'px';}}_0x5e7998(_0x4cfc26),setTimeout(()=>{_0xccbf7c(_0x4cfc26),setTimeout(()=>{const _0x3cb92a=_0x3897;_0x4cfc26[_0x3cb92a(0x1a1)]=_0x3cb92a(0x1b5),_0x4cfc26[_0x3cb92a(0x18b)]=_0x3cb92a(0x19c),_0x5e7998(_0x4cfc26),setTimeout(()=>{_0xccbf7c(_0x4cfc26),setTimeout(()=>{_0x5e7998(_0x1028ed),setTimeout(()=>{const _0x1cc115=_0x3897;_0x5e7998(_0x37043f),_0x340474[_0x1cc115(0x1a1)][_0x1cc115(0x143)]=_0x1cc115(0x1c0),_0x340474[_0x1cc115(0x1a1)][_0x1cc115(0x13e)]=_0x1cc115(0x1d4),_0x5e7998(_0x340474),_0x5e7998(tobravesouls);},0x64);},0x3e8);},0x7d0);},0x3e8);},0x7d0);function _0x24ad78(){_0x5e7998(_0x3cca7e),_0x5e7998(_0x3ddcc1),_0x5e7998(_0x2753ba),_0x5e7998(_0x55903e),timerIsActive=!![];}function _0x36a34e(){const _0x3aa13b=_0x4cf4fe;let _0x59f2d3=document[_0x3aa13b(0x1c9)](_0x3aa13b(0x1c7));if(timerIsActive){_0x51bd49==0x6590&&(_0x1fb1f1[_0x3aa13b(0x1b0)]=_0x3aa13b(0x1d7),_0x5cc6c8['style'][_0x3aa13b(0x13e)]='2vh',setTimeout(()=>{const _0x124a8e=_0x3aa13b;_0x5cc6c8[_0x124a8e(0x1a1)][_0x124a8e(0x13e)]=_0x124a8e(0x1e6);},0xbb8));_0x51bd49==0x3e80&&(_0x1fb1f1[_0x3aa13b(0x1b0)]='Pilas\x20pilas\x20pues!\x20El\x20tiempo\x20se\x20está\x20acabandoooo',_0x5cc6c8[_0x3aa13b(0x1a1)][_0x3aa13b(0x13e)]=_0x3aa13b(0x19b),setTimeout(()=>{const _0xaf61d0=_0x3aa13b;_0x5cc6c8[_0xaf61d0(0x1a1)][_0xaf61d0(0x13e)]=_0xaf61d0(0x1e6);},0xbb8));_0x51bd49==0x2af8&&(_0x1fb1f1[_0x3aa13b(0x1b0)]=_0x3aa13b(0x152),_0x5cc6c8[_0x3aa13b(0x1a1)][_0x3aa13b(0x13e)]=_0x3aa13b(0x19b),setTimeout(()=>{const _0x5bc409=_0x3aa13b;_0x5cc6c8[_0x5bc409(0x1a1)][_0x5bc409(0x13e)]=_0x5bc409(0x1e6);},0xbb8));_0x51bd49==0x1770&&(_0x1fb1f1[_0x3aa13b(0x1b0)]='Me\x20va\x20a\x20dar\x20algo,\x20métale\x20metaleeee',_0x5cc6c8[_0x3aa13b(0x1a1)][_0x3aa13b(0x13e)]=_0x3aa13b(0x19b),setTimeout(()=>{const _0x4ca25b=_0x3aa13b;_0x5cc6c8[_0x4ca25b(0x1a1)][_0x4ca25b(0x13e)]=_0x4ca25b(0x1e6);},0xbb8));let _0x5df002=Math[_0x3aa13b(0x1d1)](_0x51bd49%0xea60/0x3e8),_0xf7bda7=Math[_0x3aa13b(0x1d1)](_0x51bd49%0x3e8/0xa),_0x48eaa0=_0x5df002[_0x3aa13b(0x15c)]()[_0x3aa13b(0x199)](0x2,'0'),_0x28c586=_0xf7bda7[_0x3aa13b(0x15c)]()[_0x3aa13b(0x199)](0x2,'0');document[_0x3aa13b(0x180)](_0x3aa13b(0x185))[_0x3aa13b(0x18b)]=_0x48eaa0,document[_0x3aa13b(0x180)](_0x3aa13b(0x144))[_0x3aa13b(0x18b)]=_0x28c586,_0x51bd49-=0xa;if(_0x51bd49<=0x0){timerIsActive=![],clearInterval(_0x3c4b9d),document[_0x3aa13b(0x180)](_0x3aa13b(0x144))[_0x3aa13b(0x18b)]='00',_0xccbf7c(_0x3cca7e),_0xccbf7c(_0x345d7b),_0xccbf7c(Q25),_0xccbf7c(_0x19aa75),_0xccbf7c(_0x55903e),_0xccbf7c(_0x339f9b),_0xccbf7c(containerBotones25),_0xccbf7c(_0x19eb5c),_0xccbf7c(_0x2753ba),_0x30def9[_0x3aa13b(0x1a1)]['backgroundColor']=_0x3aa13b(0x1e0),_0x3120e3['style'][_0x3aa13b(0x171)]=_0x3aa13b(0x17c),_0x59f2d3[_0x3aa13b(0x1a1)]['position']=_0x3aa13b(0x181),_0x59f2d3[_0x3aa13b(0x1a1)][_0x3aa13b(0x13e)]=_0x3aa13b(0x1d3),_0x59f2d3[_0x3aa13b(0x1a1)][_0x3aa13b(0x171)]='white',_0x31ca60[_0x3aa13b(0x1a1)][_0x3aa13b(0x171)]=_0x3aa13b(0x17c),_0x1b53f6[_0x3aa13b(0x1a1)][_0x3aa13b(0x171)]=_0x3aa13b(0x17c),_0x4cfc26[_0x3aa13b(0x1a1)]='transform:\x20rotate(0deg)\x20scale(1,\x201)',_0x4cfc26[_0x3aa13b(0x1a1)][_0x3aa13b(0x194)]='2vh',_0x4cfc26['innerHTML']=_0x3aa13b(0x1be);var _0x27019a=document[_0x3aa13b(0x180)](_0x3aa13b(0x179));_0x5e7998(_0x4cfc26);const _0x45533d=_0x3aa13b(0x1d0);let _0x7198fd=0x0;function _0x49b5a1(){const _0x27947d=_0x3aa13b;_0x27019a[_0x27947d(0x18b)]=_0x45533d[_0x27947d(0x183)](0x0,_0x7198fd),_0x7198fd++,_0x7198fd<=_0x45533d[_0x27947d(0x1da)]&&setTimeout(_0x49b5a1,0x64);}_0x49b5a1(),_0x27019a['classList'][_0x3aa13b(0x154)](_0x3aa13b(0x1c8)),_0x57d539[_0x3aa13b(0x18b)]=_0x3aa13b(0x177),_0x340474['style']['position']=_0x3aa13b(0x181),_0x340474['style'][_0x3aa13b(0x13e)]=_0x3aa13b(0x16a),_0x57d539['style'][_0x3aa13b(0x1b3)]=_0x3aa13b(0x182),_0x1028ed['style']['position']='absolute',_0x1028ed['style'][_0x3aa13b(0x13e)]=_0x3aa13b(0x13d),_0x1028ed[_0x3aa13b(0x1a1)][_0x3aa13b(0x194)]=_0x3aa13b(0x1d5),_0x1028ed['style']['color']='#ffffffd0',_0x1028ed[_0x3aa13b(0x18b)]=_0x3aa13b(0x148),setTimeout(()=>{_0x5e7998(_0x340474),setTimeout(()=>{_0x5e7998(_0x1028ed);},0x64);},0x3e8);}}}let _0x3c4b9d=setInterval(_0x36a34e,0xa);function _0x39fb9f(){const _0x5863b0=_0x4cf4fe;_0x2635cd[_0x5863b0(0x184)]===''?_0x2b4501[_0x5863b0(0x1a1)][_0x5863b0(0x19f)]='hidden':_0x2b4501['style'][_0x5863b0(0x19f)]=_0x5863b0(0x1cf);}_0x39fb9f(),_0x2635cd['addEventListener'](_0x4cf4fe(0x1dd),_0x39fb9f);});function mostrarQ2(){const _0x8071a0=_0xa9476b;bar['style']['width']=_0x8071a0(0x153),numeroP['innerHTML']='2',Utils['fadeOut'](Q1),Utils[_0x8071a0(0x1bf)](containerBotones1),setTimeout(function(){const _0x547c42=_0x8071a0;Utils['fadeIn'](Q2),Utils[_0x547c42(0x156)](containerBotones2);},0x3e8);}function mostrarQ25(){const _0x45e4c9=_0xa9476b;bar[_0x45e4c9(0x1a1)]['width']=_0x45e4c9(0x17b),numeroP[_0x45e4c9(0x18b)]='3',Utils['fadeOut'](Q2),Utils[_0x45e4c9(0x1bf)](containerBotones2),setTimeout(function(){const _0x2604e4=_0x45e4c9;Utils[_0x2604e4(0x156)](Q25),Utils['fadeIn'](containerBotones25);},0x3e8);}function mostrarQ3(){const _0xe2bb93=_0xa9476b;bar[_0xe2bb93(0x1a1)][_0xe2bb93(0x15e)]='5%',numeroP['innerHTML']='\x20',error[_0xe2bb93(0x1a1)][_0xe2bb93(0x178)]='10%',error[_0xe2bb93(0x1a1)][_0xe2bb93(0x15e)]='90%',error['style'][_0xe2bb93(0x171)]='#fe0000',error['innerHTML']=_0xe2bb93(0x19d),Utils['fadeOut'](Q25),Utils[_0xe2bb93(0x1bf)](containerBotones25),setTimeout(function(){const _0x338d31=_0xe2bb93;Utils[_0x338d31(0x156)](Q3),Utils['fadeIn'](containerBotones3);},0x3e8);}function mostrarQ4(){const _0x46cf0a=_0xa9476b;timerIsActive=![],ultimoBtnNO[_0x46cf0a(0x15b)]=!![],bar[_0x46cf0a(0x1a1)][_0x46cf0a(0x15e)]=_0x46cf0a(0x1a2),Utils[_0x46cf0a(0x1bf)](Q3),Utils[_0x46cf0a(0x1bf)](containerBotones3),Utils['fadeOut'](containerTimerGlob),Utils[_0x46cf0a(0x1bf)](progressBar),principalCont['style'][_0x46cf0a(0x19e)]='#f22a2a',BeText[_0x46cf0a(0x1a1)][_0x46cf0a(0x171)]=_0x46cf0a(0x17c),pTextoP[_0x46cf0a(0x1a1)]='transform:\x20rotate(0deg)\x20scale(1,\x201)',pTextoP[_0x46cf0a(0x1a1)][_0x46cf0a(0x155)]=_0x46cf0a(0x1bd),pTextoP['innerHTML']=_0x46cf0a(0x173),Utils[_0x46cf0a(0x156)](pTextoP),Qr4['innerHTML']=generateCode(),timerIsActive=![],llenarInput(_0x46cf0a(0x1c4),Qr4[_0x46cf0a(0x18b)]),setTimeout(function(){const _0x3a6e29=_0x46cf0a;Utils['fadeOut'](pTextoP),principalCont[_0x3a6e29(0x1a1)][_0x3a6e29(0x19e)]=_0x3a6e29(0x166),BeText[_0x3a6e29(0x1a1)]['color']=_0x3a6e29(0x1d9),setTimeout(()=>{Utils['fadeIn'](Q4),setTimeout(()=>{const _0x4091d5=_0x3897;document['getElementById'](_0x4091d5(0x18a))['style'][_0x4091d5(0x171)]='#ffffff',setTimeout(()=>{const _0x18ab1f=_0x4091d5;document[_0x18ab1f(0x180)](_0x18ab1f(0x18a))[_0x18ab1f(0x1a1)][_0x18ab1f(0x171)]=_0x18ab1f(0x188),document[_0x18ab1f(0x180)]('suenoS')[_0x18ab1f(0x1a1)]['color']=_0x18ab1f(0x13b),setTimeout(()=>{const _0x425c1a=_0x18ab1f;document['getElementById'](_0x425c1a(0x1ec))[_0x425c1a(0x1a1)][_0x425c1a(0x171)]='#525252',document[_0x425c1a(0x180)](_0x425c1a(0x1ed))[_0x425c1a(0x1a1)][_0x425c1a(0x171)]=_0x425c1a(0x13b),setTimeout(()=>{const _0x268e33=_0x425c1a;document[_0x268e33(0x180)]('estaS')[_0x268e33(0x1a1)][_0x268e33(0x171)]=_0x268e33(0x188),document['getElementById']('aS')['style'][_0x268e33(0x171)]='#ffffff',setTimeout(()=>{const _0x3b9c49=_0x268e33;document[_0x3b9c49(0x180)]('aS')['style'][_0x3b9c49(0x171)]=_0x3b9c49(0x188),document[_0x3b9c49(0x180)](_0x3b9c49(0x13f))[_0x3b9c49(0x1a1)]['color']=_0x3b9c49(0x13b),setTimeout(()=>{const _0x3d85bf=_0x3b9c49;document[_0x3d85bf(0x180)]('salvoS')[_0x3d85bf(0x1a1)][_0x3d85bf(0x171)]=_0x3d85bf(0x188),document[_0x3d85bf(0x180)]('conS')['style']['color']=_0x3d85bf(0x13b),setTimeout(()=>{const _0x16c759=_0x3d85bf;document[_0x16c759(0x180)](_0x16c759(0x14e))['style'][_0x16c759(0x171)]='#525252',document[_0x16c759(0x180)](_0x16c759(0x14b))[_0x16c759(0x1a1)][_0x16c759(0x171)]=_0x16c759(0x13b),setTimeout(()=>{const _0x1b7a8b=_0x16c759;document[_0x1b7a8b(0x180)](_0x1b7a8b(0x14b))['style']['color']=_0x1b7a8b(0x188),setTimeout(()=>{const _0x33874d=_0x1b7a8b;Utils[_0x33874d(0x1bf)](Q4),pTextoP[_0x33874d(0x1a1)][_0x33874d(0x13e)]='25vh',pTextoP['innerHTML']=_0x33874d(0x1ae),pTextoP['style'][_0x33874d(0x194)]='1.7vh',Utils[_0x33874d(0x156)](pTextoP),setTimeout(()=>{const _0x1722af=_0x33874d;Utils[_0x1722af(0x156)](containerQR),Utils[_0x1722af(0x156)](Qr4),Utils['fadeIn'](IgBar);function _0x33fe3e(){const _0x2d5c74=_0x1722af;iguser[_0x2d5c74(0x184)]===''?(sliderCont3[_0x2d5c74(0x1a1)][_0x2d5c74(0x13e)]='-200vh',setTimeout(()=>{const _0x53a984=_0x2d5c74;sliderCont2[_0x53a984(0x1a1)][_0x53a984(0x13e)]=_0x53a984(0x17d),Utils[_0x53a984(0x156)](sliderCont2);},0x1388)):(sliderCont2[_0x2d5c74(0x1a1)][_0x2d5c74(0x13e)]=_0x2d5c74(0x1b1),setTimeout(()=>{const _0x1ef592=_0x2d5c74;sliderCont3[_0x1ef592(0x1a1)][_0x1ef592(0x13e)]=_0x1ef592(0x17d),Utils[_0x1ef592(0x156)](sliderCont3),Utils['fadeIn'](relax);},0xc8));}_0x33fe3e(),iguser[_0x1722af(0x1ab)](_0x1722af(0x1dd),_0x33fe3e);},0x3e8);},0x190);},0x190);},0x190);},0x190);},0x190);},0x190);},0x190);},0x190);},0x190);},0x3e8);},0x3e8),submit[_0x46cf0a(0x164)]();}function generateCode(){const _0x53070b=_0xa9476b;let _0x71e477=0xa,_0x126012='Be',_0x142096=_0x53070b(0x196);for(let _0x412d8f=0x0;_0x412d8f<_0x71e477;_0x412d8f++){_0x126012+=_0x142096[_0x53070b(0x1ea)](Math[_0x53070b(0x1d1)](Math[_0x53070b(0x1a6)]()*_0x142096[_0x53070b(0x1da)]));}return _0x126012;}function copyCode(){const _0x38ddf2=_0xa9476b;Utils[_0x38ddf2(0x156)](copiadoDiv);var _0x5511fa=Qr4['innerHTML'],_0x12d20c=document[_0x38ddf2(0x1a9)](_0x38ddf2(0x1eb));_0x12d20c[_0x38ddf2(0x184)]=_0x5511fa,document[_0x38ddf2(0x136)][_0x38ddf2(0x159)](_0x12d20c),_0x12d20c[_0x38ddf2(0x163)](),_0x12d20c[_0x38ddf2(0x1e9)](0x0,0x1869f),document[_0x38ddf2(0x1c2)]('copy'),document[_0x38ddf2(0x136)][_0x38ddf2(0x14a)](_0x12d20c);var _0x3c4100=_0x38ddf2(0x1cb),_0x145715=encodeURIComponent(_0x38ddf2(0x139)+_0x5511fa),_0x26c46a='https://wa.me/'+_0x3c4100+_0x38ddf2(0x1aa)+_0x145715;window['open'](_0x26c46a),setTimeout(()=>{const _0x143228=_0x38ddf2;Utils[_0x143228(0x1bf)](copiadoDiv);},0x5dc);}
+    const containerTimer = document.querySelector('.containerTimer');
+
+    var timerIsActive = false;
+
+    function llenarInput(id, ans) {
+        document.getElementById(id).value = ans;
+    }
+
+    const Utils = {
+        fadeOut: function (element) {
+            element.classList.remove('fade-in');
+            element.classList.add('fade-out', 'hidden');
+
+            setTimeout(function () {
+                element.style.display = 'none';
+            }, 1000);
+        },
+
+        fadeIn: function (element) {
+            if (element === containerTimerGlob ||
+                element === containerBotones3 ||
+                element === pTextoP ||
+                element === containerBotones1 ||
+                element === containerBotones2 ||
+                element === containerBotones3 ||
+                element === draggablediv ||
+                element === containerBotones2 ||
+                element === IgBar ||
+                element === containerBotones25) {
+                element.style.display = 'flex';  // Cambia a block o el display que necesites
+            } else {
+                element.style.display = 'block';  // Cambia a block o el display que necesites
+            }
+            element.classList.add('fade-in');
+            element.classList.remove('fade-out');
+            element.classList.remove('hidden');
+
+            // Forzar reflujo para asegurarse de que la transición ocurra
+            element.offsetWidth;
+
+            // Agregar la clase que cambia la opacidad a 1
+            element.classList.add('visible');
+        }
+    };
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.forms['contact-form'];
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyQZbHranPSYBTAsPN7lJYv_mkysEVvLya-xu6F_Q1nzICSfl533ik4Jz9fZpNo85kB/exec';
+
+    // Función para manejar el envío del formulario
+    function submitForm(event) {
+        event.preventDefault(); // Previene el envío por defecto
+
+        const formData = new FormData(form);
+
+        fetch(scriptURL, {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                if (response.ok) {
+                    console.log("¡Gracias! ¡Tu formulario se envió correctamente!");
+                } else {
+                    throw new Error('Error en la solicitud.');
+                }
+            })
+            .catch(error => {
+                console.error('¡Error!', error);
+                alert("¡Ha ocurrido un error al enviar el formulario!");
+            });
+    }
+
+    // Añadir el listener al evento submit solo una vez
+    form.addEventListener('submit', submitForm);
+});
+
+
+    /* JavaScript */
+    document.addEventListener('DOMContentLoaded', function () {
+        const sliderButton = document.getElementById('sliderButton');
+        const sliderContainer = document.querySelector('.slider-container');
+        const maxLeft = sliderContainer.clientWidth - sliderButton.clientWidth;
+
+        const sliderButton2 = document.getElementById('sliderButton2');
+        const sliderContainer2 = document.querySelector('.slider-container2');
+        const maxLeft2 = sliderContainer2.clientWidth - sliderButton2.clientWidth;
+
+        const sliderButton3 = document.getElementById('sliderButton3');
+        const sliderContainer3 = document.querySelector('.slider-container3');
+        const maxLeft3 = sliderContainer3.clientWidth - sliderButton3.clientWidth;
+
+        //Primera Pantalla////////////////////////////////////////////////////////////
+        const pTextoP = document.getElementById('pTextoP');
+        const pTextoP2 = document.getElementById('pTextoP2');
+        const sliderCont = document.getElementById('sliderCont');
+        const sliderCont2 = document.getElementById('sliderCont2');
+        const sliderCont3 = document.getElementById('sliderCont3');
+        const omiedo = document.getElementById('omiedo');
+        const textRead = document.getElementById('textRead');
+        const Q1 = document.getElementById('Q1');
+        const progressBar = document.getElementById('progressBar');
+        const containerTimer = document.querySelector('.containerTimer');
+        const bar = document.getElementById('bar');
+        const containerQR = document.getElementById('containerQR');
+        const submit = document.getElementById('submit');
+        const copiadoDiv = document.getElementById('copiadoDiv');
+        const ultimoBtnNO = document.getElementById('ultimoBtnNO');
+        const BeText = document.getElementById('BeText');
+        const imglogo = document.getElementById('imglogo');
+        const principalCont = document.getElementById('principalCont');
+        const segDigits = document.getElementById('segDigits');
+        const mlsDigits = document.getElementById('mlsDigits');
+        const error = document.getElementById('error');
+        const numeroP = document.getElementById('numeroP');
+        const notif = document.getElementById('notif');
+        const nomDigS = document.getElementById('nomDigS');
+        const nomDigM = document.getElementById('nomDigM');
+        const textonoti = document.getElementById('textonoti');
+        const respuesta = document.getElementById('respuesta');
+        const IgBar = document.getElementById('IgBar');
+        const iguser = document.getElementById('iguser');
+        const relax = document.getElementById('relax');
+
+        const containerBotones1 = document.getElementById('containerBotones1');
+
+        const containerBotones2 = document.getElementById('containerBotones2');
+        const Q2 = document.getElementById('Q2');
+
+        const containerBotones3 = document.getElementById('containerBotones3');
+        const Q3 = document.getElementById('Q3');
+
+        const containerBotones4 = document.getElementById('containerBotones4');
+        const Q4 = document.getElementById('Q4');
+        const Qr4 = document.getElementById('Qr4');
+
+        const containerTimerGlob = document.getElementById('containerTimer');
+
+        let isDragging = false;
+        let isDragging2 = false; // Nuevo para el segundo slider
+        let isDragging3 = false; // Nuevo para el segundo slider
+
+
+        sliderButton.addEventListener('mousedown', startDragging);
+        sliderButton.addEventListener('touchstart', startDragging);
+
+        document.addEventListener('mouseup', endDragging);
+        document.addEventListener('touchend', endDragging);
+
+        document.addEventListener('mousemove', drag);
+        document.addEventListener('touchmove', drag);
+
+        // Funciones para el segundo slider
+        sliderButton2.addEventListener('mousedown', startDragging2);
+        sliderButton2.addEventListener('touchstart', startDragging2);
+
+        document.addEventListener('mouseup', endDragging2);
+        document.addEventListener('touchend', endDragging2);
+
+        document.addEventListener('mousemove', drag2);
+        document.addEventListener('touchmove', drag2);
+
+        // Funciones para el segundo slider
+        sliderButton3.addEventListener('mousedown', startDragging3);
+        sliderButton3.addEventListener('touchstart', startDragging3);
+
+        document.addEventListener('mouseup', endDragging3);
+        document.addEventListener('touchend', endDragging3);
+
+        document.addEventListener('mousemove', drag3);
+        document.addEventListener('touchmove', drag3);
+
+
+        const draggableDiv = document.getElementById('draggablediv');
+        const handle = document.getElementById('handle');
+        let isDraggingd3 = false;
+        let startY, startTop;
+        const minTop = 10; // equivalent to 10vh
+        const maxTop = window.innerHeight * 0.70; // equivalent to 80vh
+        const proximityThreshold = 20; // proximity threshold in pixels
+
+        handle.addEventListener('mousedown', (e) => {
+            isDraggingd3 = true;
+            startY = e.clientY;
+            startTop = draggableDiv.offsetTop;
+            draggableDiv.style.cursor = 'grabbing';
+            draggableDiv.style.transition = 'none'; // Disable transition while dragging
+        });
+
+        document.addEventListener('mouseup', () => {
+            if (isDraggingd3) {
+                isDraggingd3 = false;
+                draggableDiv.style.cursor = 'grab';
+                draggableDiv.style.transition = 'top 0.2s ease-out'; // Enable transition on release
+
+                const currentTop = draggableDiv.offsetTop;
+                if (currentTop < minTop) {
+                    draggableDiv.style.top = '10vh';
+                } else if (currentTop > maxTop) {
+                    draggableDiv.style.top = '70vh';
+                } else if (Math.abs(currentTop - minTop) < proximityThreshold) {
+                    draggableDiv.style.top = '10vh';
+                } else if (Math.abs(currentTop - maxTop) < proximityThreshold) {
+                    draggableDiv.style.top = '70vh';
+                } else {
+                    // Snap to the nearest position
+                    if (Math.abs(currentTop - minTop) < Math.abs(currentTop - maxTop)) {
+                        draggableDiv.style.top = '10vh';
+                    } else {
+                        draggableDiv.style.top = '80vh';
+                    }
+                }
+            }
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (isDraggingd3) {
+                const dy = e.clientY - startY;
+                const newTop = startTop + dy;
+                if (newTop >= minTop && newTop <= maxTop) {
+                    draggableDiv.style.top = `${newTop}px`;
+                }
+            }
+        });
+
+        handle.addEventListener('touchstart', (e) => {
+            isDraggingd3 = true;
+            startY = e.touches[0].clientY;
+            startTop = draggableDiv.offsetTop;
+            draggableDiv.style.cursor = 'grabbing';
+            draggableDiv.style.transition = 'none'; // Disable transition while dragging
+        });
+
+        document.addEventListener('touchend', () => {
+            if (isDraggingd3) {
+                isDraggingd3 = false;
+                draggableDiv.style.cursor = 'grab';
+                draggableDiv.style.transition = 'top 1s ease'; // Enable transition on release
+
+                const currentTop = draggableDiv.offsetTop;
+                if (currentTop < minTop) {
+                    draggableDiv.style.top = '10vh';
+                } else if (currentTop > maxTop) {
+                    draggableDiv.style.top = '70vh';
+                } else if (Math.abs(currentTop - minTop) < proximityThreshold) {
+                    draggableDiv.style.top = '10vh';
+                } else if (Math.abs(currentTop - maxTop) < proximityThreshold) {
+                    draggableDiv.style.top = '70vh';
+                } else {
+                    // Snap to the nearest position
+                    if (Math.abs(currentTop - minTop) < Math.abs(currentTop - maxTop)) {
+                        draggableDiv.style.top = '10vh';
+                    } else {
+                        draggableDiv.style.top = '70vh';
+                    }
+                }
+            }
+        });
+
+        document.addEventListener('touchmove', (e) => {
+            if (isDraggingd3) {
+                const dy = e.touches[0].clientY - startY;
+                const newTop = startTop + dy;
+                if (newTop >= minTop && newTop <= maxTop) {
+                    draggableDiv.style.top = `${newTop}px`;
+                }
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function startDragging(e) {
+            isDragging = true;
+            sliderButton.style.transition = 'none';
+        }
+
+        function startDragging2(e) {
+            isDragging2 = true;
+            sliderButton2.style.transition = 'none';
+        }
+
+        function startDragging3(e) {
+            isDragging3 = true;
+            sliderButton3.style.transition = 'none';
+        }
+
+
+        function fadeOut(element) {
+            element.classList.remove('fade-in');
+            element.classList.add('fade-out', 'hidden');
+
+            setTimeout(function () {
+                element.style.display = 'none';
+            }, 1000);
+        }
+        let timer = 30000;
+
+        function fadeIn(element) {
+            if (element === containerTimer ||
+                element === containerBotones1 ||
+                element === containerBotones2 ||
+                element === progressBar ||
+                element === containerBotones25 ||
+                element === draggablediv ||
+                element === tobravesouls ||
+                element === containerBotones3) {
+                element.style.display = 'flex';  // Cambia a block o el display que necesites
+
+            } else {
+                element.style.display = 'block';  // Cambia a block o el display que necesites
+            }
+            element.classList.add('fade-in');
+            element.classList.remove('fade-out');
+            element.classList.remove('hidden');
+
+            // Forzar reflujo para asegurarse de que la transición ocurra
+            element.offsetWidth;
+
+            // Agregar la clase que cambia la opacidad a 1
+            element.classList.add('visible');
+        }
+
+        var contInt = 0;
+
+        function endDragging(e) {
+            if (isDragging) {
+
+                if (contInt == 0) {
+                    isDragging = false;
+                    Q1.style.visibility = "visible"
+                    progressBar.style.visibility = "visible"
+                    progressBar.style.pointerEvents = "all"
+                    containerBotones1.style.visibility = "visible"
+                    containerBotones1.style.pointerEvents = "all"
+                    sliderButton.style.transition = 'left 0.3s';
+                    sliderButton.style.transition = 'background-color 0.5s';
+
+                    if (parseInt(sliderButton.style.left, 10) >= maxLeft) {
+                        console.log('DESLIZADO');
+
+                        fadeOut(imglogo)
+                        fadeOut(sliderCont);
+                        fadeOut(omiedo);
+                        fadeOut(pTextoP)
+                        fadeOut(tobravesouls)
+
+                        principalCont.style.backgroundColor = "#151515"
+
+                        setTimeout(function () {
+
+                            textRead.innerHTML = "<span id='sabiamos'>SABÍAMOS </span><span id='que1'>QUE </span><br><span id='dirias'>DIRÍAS </span><span id='que2'>QUE </span><span id='si'>SÍ</span>";
+
+                            setTimeout(function () {
+                                fadeIn(BeText)
+                                fadeIn(textRead);
+
+                                setTimeout(function () {
+                                    document.getElementById('sabiamos').style.color = "#ffffff"
+
+                                    setTimeout(function () {
+                                        document.getElementById('sabiamos').style.color = "#525252"
+                                        document.getElementById('que1').style.color = "#ffffff"
+
+                                        setTimeout(function () {
+                                            document.getElementById('que1').style.color = "#525252"
+                                            document.getElementById('dirias').style.color = "#ffffff"
+
+                                            setTimeout(function () {
+                                                document.getElementById('dirias').style.color = "#525252"
+                                                document.getElementById('que2').style.color = "#ffffff"
+
+                                                setTimeout(function () {
+                                                    document.getElementById('que2').style.color = "#525252"
+                                                    document.getElementById('si').style.color = "#ffffff"
+
+                                                    setTimeout(function () {
+                                                        document.getElementById('si').style.color = "#525252"
+                                                        fadeOut(textRead)
+                                                        setTimeout(function () {
+                                                            contInt++;
+                                                            mostrarQ1();
+                                                        }, 1000);
+                                                    }, 400);
+                                                }, 400);
+                                            }, 400);
+                                        }, 400);
+                                    }, 400);
+                                }, 1000);
+                            }, 500);
+                        }, 1000);
+
+
+
+                    } else {
+                        sliderButton.style.left = '0px';
+                    }
+                } else {
+                    location.reload();
+                }
+            }
+        }
+
+
+        function endDragging2(e) {
+            if (isDragging2) {
+                isDragging2 = false;
+                // Lógica de fin de arrastre para el segundo slider...
+                if (parseInt(sliderButton2.style.left, 10) >= maxLeft2) {
+                    console.log('DESLIZADO2');
+
+                    fadeOut(relax)
+                    fadeOut(pTextoP);
+                    fadeOut(IgBar);
+                    fadeOut(containerQR)
+                    fadeOut(sliderContainer2)
+                    principalCont.style.backgroundColor = "black"
+                    principalCont.style.backgroundImage = "url('img/bggif.gif')"
+                    fadeIn(draggablediv)
+
+                } else {
+                    sliderButton2.style.left = '0px';
+                }
+            }
+        }
+
+        function endDragging3(e) {
+            if (isDragging3) {
+                isDragging3 = false;
+                // Lógica de fin de arrastre para el segundo slider...
+                if (parseInt(sliderButton3.style.left, 10) >= maxLeft3) {
+                    console.log('DESLIZADO3');
+
+                    llenarInput("inputP5", iguser.value)
+                    submit.click();
+
+                    fadeOut(relax)
+                    fadeOut(IgBar)
+                    fadeOut(sliderCont2)
+                    fadeOut(pTextoP);
+                    fadeOut(containerQR)
+                    fadeOut(sliderContainer3)
+                    principalCont.style.backgroundColor = "black"
+                    principalCont.style.backgroundImage = "url('img/bggif.gif')"
+                    fadeIn(draggablediv)
+
+                } else {
+                    sliderButton3.style.left = '0px';
+                }
+            }
+        }
+
+        function drag3(e) {
+            if (isDragging3) {
+                const rect = sliderContainer3.getBoundingClientRect();
+                let clientX;
+                if (e.type === 'touchmove') {
+                    clientX = e.touches[0].clientX;
+                } else {
+                    clientX = e.clientX;
+                }
+                let newLeft = clientX - rect.left - sliderButton3.clientWidth / 2;
+
+                if (newLeft < 0) {
+                    newLeft = 0;
+                } else if (newLeft > maxLeft3) {
+                    newLeft = maxLeft3;
+                }
+
+                sliderButton3.style.left = newLeft + 'px';
+            }
+        }
+
+        function drag(e) {
+            if (isDragging) {
+                const rect = sliderContainer.getBoundingClientRect();
+                let clientX;
+                if (e.type === 'touchmove') {
+                    clientX = e.touches[0].clientX;
+                } else {
+                    clientX = e.clientX;
+                }
+                let newLeft = clientX - rect.left - sliderButton.clientWidth / 2;
+
+                if (newLeft < 0) {
+                    newLeft = 0;
+                } else if (newLeft > maxLeft) {
+                    newLeft = maxLeft;
+                }
+
+                sliderButton.style.left = newLeft + 'px';
+            }
+        }
+
+        function drag2(e) {
+            if (isDragging2) {
+                const rect = sliderContainer2.getBoundingClientRect();
+                let clientX;
+                if (e.type === 'touchmove') {
+                    clientX = e.touches[0].clientX;
+                } else {
+                    clientX = e.clientX;
+                }
+                let newLeft = clientX - rect.left - sliderButton2.clientWidth / 2;
+
+                if (newLeft < 0) {
+                    newLeft = 0;
+                } else if (newLeft > maxLeft2) {
+                    newLeft = maxLeft2;
+                }
+
+                sliderButton2.style.left = newLeft + 'px';
+            }
+        }
+
+        fadeIn(pTextoP);
+
+        setTimeout(() => {
+            fadeOut(pTextoP)
+            setTimeout(() => {
+                pTextoP.style = "transform: rotate(180deg) scale(-1, 1)"
+                pTextoP.innerHTML = "BIENVENIDO"
+                fadeIn(pTextoP)
+                setTimeout(() => {
+                    fadeOut(pTextoP)
+                    setTimeout(() => {
+                        fadeIn(omiedo)
+                        setTimeout(() => {
+                            fadeIn(imglogo)
+                            sliderContainer.style.position = "relative"
+                            sliderContainer.style.top = "10vh"
+                            fadeIn(sliderContainer)
+                            fadeIn(tobravesouls)
+                        }, 100);
+                    }, 1000);
+                }, 2000);
+            }, 1000);
+        }, 2000);
+
+
+        function mostrarQ1() {
+            fadeIn(Q1)
+            fadeIn(containerTimer)
+            fadeIn(progressBar)
+            fadeIn(containerBotones1)
+
+            timerIsActive = true
+        }
+
+        function moveFirstDivToEnd() {
+            let containerTimer = document.querySelector('.containerTimer');
+
+            if (timerIsActive) {
+
+                if (timer == 26000) {
+                    textonoti.innerText = "Tic, tac, tic, tac ...."
+                    notif.style.top = "2vh"
+                    setTimeout(() => {
+                        notif.style.top = "-130vh"
+                    }, 3000);
+                }
+
+                if (timer == 16000) {
+                    textonoti.innerText = "Pilas pilas pues! El tiempo se está acabandoooo"
+                    notif.style.top = "2vh"
+                    setTimeout(() => {
+                        notif.style.top = "-130vh"
+                    }, 3000);
+                }
+
+                if (timer == 11000) {
+                    textonoti.innerText = "Mucha pensadera, mucha pensaderaaa"
+                    notif.style.top = "2vh"
+                    setTimeout(() => {
+                        notif.style.top = "-130vh"
+                    }, 3000);
+                }
+
+                if (timer == 6000) {
+                    textonoti.innerText = "Me va a dar algo, métale metaleeee"
+                    notif.style.top = "2vh"
+                    setTimeout(() => {
+                        notif.style.top = "-130vh"
+                    }, 3000);
+                }
+
+                // Calcula los minutos, segundos y milisegundos
+                let seconds = Math.floor((timer % 60000) / 1000);
+                let milliseconds = Math.floor((timer % 1000) / 10); // Dividir por 10 para tener dos dígitos
+
+                // Formatea los valores para que siempre tengan dos dígitos (excepto milisegundos)
+                let formattedSeconds = seconds.toString().padStart(2, '0');
+                let formattedMilliseconds = milliseconds.toString().padStart(2, '0');
+
+                // Actualiza el contenido de los elementos HTML
+                document.getElementById('segDigits').innerHTML = formattedSeconds;
+                document.getElementById('mlsDigits').innerHTML = formattedMilliseconds;
+
+                // Decrementa el timer
+                timer -= 10;
+
+                // Si el timer llega a 0, detén el cronómetro
+                if (timer <= 0) {
+                    timerIsActive = false;
+                    clearInterval(intervalId);
+                    document.getElementById('mlsDigits').innerHTML = "00";
+
+                    fadeOut(Q1)
+                    fadeOut(Q2)
+                    fadeOut(Q25)
+                    fadeOut(Q3)
+                    fadeOut(containerBotones1)
+                    fadeOut(containerBotones2)
+                    fadeOut(containerBotones25)
+                    fadeOut(containerBotones3)
+                    fadeOut(progressBar)
+
+                    principalCont.style.backgroundColor = "#f22a2a"
+                    BeText.style.color = "white"
+
+                    containerTimer.style.position = "absolute"
+                    containerTimer.style.top = "14vh"
+                    containerTimer.style.color = "white"
+
+                    nomDigS.style.color = "white"
+                    nomDigM.style.color = "white"
+                    pTextoP.style = "transform: rotate(0deg) scale(1, 1)"
+                    pTextoP.style.fontSize = "2vh"
+                    pTextoP.innerHTML = "<img style='height: 1.5vh' src='img/circus.png'> EY, EY EY QUE PASÓ<br><br><span style='color: #ffffffbf' id='avisamosDSP'></span>"
+                    var textElement = document.getElementById('avisamosDSP');
+                    fadeIn(pTextoP)
+
+                    const textContent = "DESPUÉS NO DIGAS QUE NO TE AVISAMOS";
+                    let index = 0;
+
+                    function writeText() {
+                        textElement.innerHTML = textContent.slice(0, index);
+                        index++;
+
+                        if (index <= textContent.length) {
+                            setTimeout(writeText, 100);
+                        }
+                    }
+
+                    writeText();
+                    
+                    textElement.classList.add('blinking');
+
+
+                    sliderButton.innerHTML = "CANGREJEAR"
+                    sliderContainer.style.position = "absolute"
+                    sliderContainer.style.top = "60vh"
+                    sliderButton.style.left = '0px';
+                    omiedo.style.position = "absolute"
+                    omiedo.style.top = "64vh"
+                    omiedo.style.fontSize = "1.3vh"
+                    omiedo.style.color = "#ffffffd0"
+                    omiedo.innerHTML = "NO SOMOS TU EX, PERO TE DAMOS<br>OTRA OPORTUNIDAD"
+
+                    setTimeout(() => {
+                        fadeIn(sliderContainer)
+                        setTimeout(() => {
+                            fadeIn(omiedo)
+                        }, 100);
+                    }, 1000);
+                }
+            }
+        }
+
+        // Llama a moveFirstDivToEnd cada 10 milisegundos
+        let intervalId = setInterval(moveFirstDivToEnd, 10);
+
+        function verificarInput() {
+            if (respuesta.value === '') {
+                ultimoBtnNO.style.visibility = 'hidden';
+            } else {
+                ultimoBtnNO.style.visibility = 'visible';
+            }
+        }
+
+        verificarInput();
+        respuesta.addEventListener('input', verificarInput);
+
+    });
+
+    function mostrarQ2() {
+        bar.style.width = "50%"
+        numeroP.innerHTML = "2"
+
+        Utils.fadeOut(Q1)
+        Utils.fadeOut(containerBotones1)
+
+        setTimeout(function () {
+            Utils.fadeIn(Q2)
+            Utils.fadeIn(containerBotones2)
+        }, 1000);
+    }
+
+    function mostrarQ25() {
+        bar.style.width = "80%"
+        numeroP.innerHTML = "3"
+
+        Utils.fadeOut(Q2)
+        Utils.fadeOut(containerBotones2)
+
+        setTimeout(function () {
+            Utils.fadeIn(Q25)
+            Utils.fadeIn(containerBotones25)
+        }, 1000);
+    }
+
+    function mostrarQ3() {
+        bar.style.width = "5%"
+        numeroP.innerHTML = " ";
+        error.style.marginLeft = "10%";
+        error.style.width = "90%";
+        error.style.color = "#fe0000";
+        error.innerHTML = "OOOPPS! ESTA SE NOS PASÓ ¿ERROR...";
+
+        Utils.fadeOut(Q25)
+        Utils.fadeOut(containerBotones25)
+
+        setTimeout(function () {
+            Utils.fadeIn(Q3)
+            Utils.fadeIn(containerBotones3)
+        }, 1000);
+    }
+
+    function mostrarQ4() {
+        timerIsActive = false
+        ultimoBtnNO.disabled = true
+
+        bar.style.width = "100%"
+
+        Utils.fadeOut(Q3)
+        Utils.fadeOut(containerBotones3)
+        Utils.fadeOut(containerTimerGlob)
+        Utils.fadeOut(progressBar)
+
+        principalCont.style.backgroundColor = "#f22a2a"
+
+        BeText.style.color = "white"
+        pTextoP.style = "transform: rotate(0deg) scale(1, 1)"
+        pTextoP.style.justifyContent = "center"
+        pTextoP.innerHTML = "<img style='height: 2.5vh' src='img/bomb.png'> CRACK!"
+        Utils.fadeIn(pTextoP)
+
+        Qr4.innerHTML = generateCode();
+        timerIsActive = false
+
+        llenarInput("inputP4", Qr4.innerHTML)
+
+        setTimeout(function () {
+            Utils.fadeOut(pTextoP)
+            principalCont.style.backgroundColor = "#151515"
+            BeText.style.color = "#616161"
+
+            setTimeout(() => {
+                Utils.fadeIn(Q4)
+                setTimeout(() => {
+                    document.getElementById('tuS').style.color = "#ffffff"
+                    setTimeout(() => {
+                        document.getElementById('tuS').style.color = "#525252"
+                        document.getElementById('suenoS').style.color = "#ffffff"
+                        setTimeout(() => {
+                            document.getElementById('suenoS').style.color = "#525252"
+                            document.getElementById('estaS').style.color = "#ffffff"
+                            setTimeout(() => {
+                                document.getElementById('estaS').style.color = "#525252"
+                                document.getElementById('aS').style.color = "#ffffff"
+                                setTimeout(() => {
+                                    document.getElementById('aS').style.color = "#525252"
+                                    document.getElementById('salvoS').style.color = "#ffffff"
+                                    setTimeout(() => {
+                                        document.getElementById('salvoS').style.color = "#525252"
+                                        document.getElementById('conS').style.color = "#ffffff"
+                                        setTimeout(() => {
+                                            document.getElementById('conS').style.color = "#525252"
+                                            document.getElementById('nosotrosS').style.color = "#ffffff"
+                                            setTimeout(() => {
+                                                document.getElementById('nosotrosS').style.color = "#525252"
+                                                setTimeout(() => {
+                                                    Utils.fadeOut(Q4)
+
+                                                    pTextoP.style.top = "25vh"
+                                                    pTextoP.innerHTML = "NOS VEMOS PRONTO... GUARDA<br> ESTE CÓDIGO, PUEDE SER LA<br> LLAVE PARA CUMPLIR TU SUEÑO ;)"
+                                                    pTextoP.style.fontSize = "1.7vh"
+                                                    Utils.fadeIn(pTextoP)
+                                                    setTimeout(() => {
+                                                        Utils.fadeIn(containerQR)
+                                                        Utils.fadeIn(Qr4)
+                                                        Utils.fadeIn(IgBar)
+
+                                                        function verificarInputIG() {
+                                                            if (iguser.value === '') {
+                                                                sliderCont3.style.top = "-200vh"
+                                                                setTimeout(() => {
+                                                                    sliderCont2.style.top = "75vh"
+                                                                    Utils.fadeIn(sliderCont2)
+                                                                }, 5000);
+                                                            } else {
+                                                                sliderCont2.style.top = "-200vh"
+                                                                setTimeout(() => {
+                                                                    sliderCont3.style.top = "75vh"
+                                                                    Utils.fadeIn(sliderCont3)
+                                                                    Utils.fadeIn(relax)
+                                                                }, 200);
+                                                            }
+                                                        }
+
+                                                        verificarInputIG();
+                                                        iguser.addEventListener('input', verificarInputIG);
+                                                        
+                                                    }, 1000);
+                                                }, 400);
+                                            }, 400);
+                                        }, 400);
+                                    }, 400);
+                                }, 400);
+                            }, 400);
+                        }, 400);
+                    }, 400);
+                }, 400);
+            }, 1000);
+        }, 1000);
+
+        submit.click();
+    }
+
+    function generateCode() {
+        let string_length = 10
+        let randString = 'Be'
+        let charR = 'ABCDEFGHJKMNPQRST23456789abcdefghjkmnopqrst'
+        for (let i = 0; i < string_length; i++) {
+            randString += charR.charAt(Math.floor(Math.random() * charR.length))
+        }
+
+        return randString
+    }
+
+    function copyCode() {
+        Utils.fadeIn(copiadoDiv);
+
+        var qrTexto = Qr4.innerHTML;
+
+        var texto = document.createElement("textarea");
+        texto.value = qrTexto;
+        document.body.appendChild(texto);
+
+        texto.select();
+        texto.setSelectionRange(0, 99999); // Para dispositivos móviles
+
+        document.execCommand("copy");
+
+        document.body.removeChild(texto);
+
+        setTimeout(() => {
+            Utils.fadeOut(copiadoDiv);
+        }, 1500);
+    }

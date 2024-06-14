@@ -119,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const respuesta = document.getElementById('respuesta');
         const IgBar = document.getElementById('IgBar');
         const iguser = document.getElementById('iguser');
+        const relax = document.getElementById('relax');
 
         const containerBotones1 = document.getElementById('containerBotones1');
 
@@ -418,6 +419,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Lógica de fin de arrastre para el segundo slider...
                 if (parseInt(sliderButton2.style.left, 10) >= maxLeft2) {
                     console.log('DESLIZADO2');
+                    
+                    fadeOut(relax)
                     fadeOut(pTextoP);
                     fadeOut(IgBar);
                     fadeOut(containerQR)
@@ -442,6 +445,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     llenarInput("inputP5", iguser.value)
                     submit.click();
 
+                    fadeOut(relax)
                     fadeOut(IgBar)
                     fadeOut(sliderCont2)
                     fadeOut(pTextoP);
@@ -783,14 +787,15 @@ document.addEventListener('DOMContentLoaded', function () {
                                                             if (iguser.value === '') {
                                                                 sliderCont3.style.top = "-200vh"
                                                                 setTimeout(() => {
-                                                                    sliderCont2.style.top = "70vh"
+                                                                    sliderCont2.style.top = "75vh"
                                                                     Utils.fadeIn(sliderCont2)
                                                                 }, 5000);
                                                             } else {
                                                                 sliderCont2.style.top = "-200vh"
                                                                 setTimeout(() => {
-                                                                    sliderCont3.style.top = "70vh"
+                                                                    sliderCont3.style.top = "75vh"
                                                                     Utils.fadeIn(sliderCont3)
+                                                                    Utils.fadeIn(relax)
                                                                 }, 200);
                                                             }
                                                         }

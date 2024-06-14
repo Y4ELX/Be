@@ -149,15 +149,27 @@ body {
 
 .iguser{
     color: white;
-    text-align: start;
+    text-align: center;
     font-family: mn;    
     height: 100%;
     width: 100%;
     font-size: 1.5vh;
-    text-align: center;
     background-color: transparent;
     border: none;
+    margin-left: 2vh;
+    border-left: solid 0.2vh #f22a2a;
 }
+
+.iguser::placeholder {
+    animation: marquee 10s linear infinite;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.iguser:focus::placeholder {
+    opacity: 0;
+}
+
 
 .iguser:focus{
     outline: none;

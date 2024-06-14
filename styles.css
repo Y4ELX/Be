@@ -160,6 +160,18 @@ body {
     border-left: solid 0.2vh #f22a2a;
 }
 
+#avisamosDSP::after {
+    content: '█';
+    /* Carácter del cursor */
+    display: inline-block;
+    /* Animación de parpadeo */
+    animation-timing-function: step-start;
+}
+
+.blinking::after {
+    animation: blink 1000ms infinite;
+}
+
 .iguser::placeholder {
     animation: marquee 10s linear infinite;
     display: inline-block;

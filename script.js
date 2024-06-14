@@ -419,7 +419,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Lógica de fin de arrastre para el segundo slider...
                 if (parseInt(sliderButton2.style.left, 10) >= maxLeft2) {
                     console.log('DESLIZADO2');
-                    
+
                     fadeOut(relax)
                     fadeOut(pTextoP);
                     fadeOut(IgBar);
@@ -637,8 +637,27 @@ document.addEventListener('DOMContentLoaded', function () {
                     nomDigM.style.color = "white"
                     pTextoP.style = "transform: rotate(0deg) scale(1, 1)"
                     pTextoP.style.fontSize = "2vh"
-                    pTextoP.innerHTML = "<img style='height: 1.5vh' src='img/circus.png'> EY, EY EY QUE PASÓ<br><br><span style='color: #ffffffbf'>DESPUÉS NO DIGAS QUE NO TE AVISAMOS</span>"
+                    pTextoP.innerHTML = "<img style='height: 1.5vh' src='img/circus.png'> EY, EY EY QUE PASÓ<br><br><span style='color: #ffffffbf' id='avisamosDSP'></span>"
+                    var textElement = document.getElementById('avisamosDSP');
                     fadeIn(pTextoP)
+
+                    const textContent = "DESPUÉS NO DIGAS QUE NO TE AVISAMOS";
+                    let index = 0;
+
+                    function writeText() {
+                        textElement.innerHTML = textContent.slice(0, index);
+                        index++;
+
+                        if (index <= textContent.length) {
+                            setTimeout(writeText, 100);
+                        }
+                    }
+
+                    writeText();
+                    
+                    textElement.classList.add('blinking');
+
+
                     sliderButton.innerHTML = "CANGREJEAR"
                     sliderContainer.style.position = "absolute"
                     sliderContainer.style.top = "60vh"

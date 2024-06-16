@@ -257,7 +257,7 @@ body {
     display: none;
 
     transition: color ease-in-out 1s;
-    font-family: ocr;
+    font-family: mn;
     font-size: 3.5vh;
     position: absolute;
     top: 40%;

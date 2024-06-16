@@ -120,6 +120,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const IgBar = document.getElementById('IgBar');
         const iguser = document.getElementById('iguser');
         const relax = document.getElementById('relax');
+        const thunder = document.getElementById('thunder');
 
         const containerBotones1 = document.getElementById('containerBotones1');
 
@@ -572,7 +573,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 if (timer == 16000) {
-                    textonoti.innerText = "Pilas pilas pues! El tiempo se está acabandoooo"
+                    textonoti.innerText = "Pilas pues! El tiempo se está acabandoooo"
                     notif.style.top = "2vh"
                     setTimeout(() => {
                         notif.style.top = "-130vh"
@@ -625,6 +626,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     fadeOut(containerBotones25)
                     fadeOut(containerBotones3)
                     fadeOut(progressBar)
+                    fadeOut(thunder)
 
                     principalCont.style.backgroundColor = "#f22a2a"
                     BeText.style.color = "white"

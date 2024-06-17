@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
-        handle.addEventListener('touchstart', (e) => {
+        draggableDiv.addEventListener('touchstart', (e) => {
             isDraggingd3 = true;
             startY = e.touches[0].clientY;
             startTop = draggableDiv.offsetTop;

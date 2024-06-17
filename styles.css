@@ -662,7 +662,7 @@ body {
     top: 70vh;
     flex-direction: column;
     align-items: center;
-    display: none;
+    display: flex;
     justify-content: center;
     cursor: grab;
 }

@@ -141,6 +141,19 @@ document.addEventListener('DOMContentLoaded', function () {
         let isDragging3 = false; // Nuevo para el segundo slider
 
 
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0; // Para Safari
+            document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+        }
+
         sliderButton.addEventListener('mousedown', startDragging);
         sliderButton.addEventListener('touchstart', startDragging);
 
@@ -691,6 +704,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
+        scrollToTop();
         verificarInput();
         respuesta.addEventListener('input', verificarInput);
 

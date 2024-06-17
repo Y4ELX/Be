@@ -150,6 +150,8 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         function scrollToTop() {
+            console.log("SCROLL")
+
             document.body.scrollTop = 0; // Para Safari
             document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
         }
@@ -697,6 +699,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let intervalId = setInterval(moveFirstDivToEnd, 10);
 
         function verificarInput() {
+            scrollToTop();
             if (respuesta.value === '') {
                 ultimoBtnNO.style.visibility = 'hidden';
             } else {
@@ -704,7 +707,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
 
-        scrollToTop();
         verificarInput();
         respuesta.addEventListener('input', verificarInput);
 

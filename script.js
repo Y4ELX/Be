@@ -6,6 +6,22 @@
         document.getElementById(id).value = ans;
     }
 
+    function adjustWidth(input) {
+        var helper = document.getElementById('width-helper');
+
+        // Copia el valor del input al helper
+        helper.textContent = input.value;
+
+        // Calcula el nuevo ancho
+        var newWidth = helper.offsetWidth;
+
+        if(input.value==''){
+            input.style.width = '70%'
+        }else{
+            input.style.width = newWidth+10 + 'px';
+        }
+    }
+
     const Utils = {
         fadeOut: function (element) {
             element.classList.remove('fade-in');
@@ -121,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const iguser = document.getElementById('iguser');
         const relax = document.getElementById('relax');
         const thunder = document.getElementById('thunder');
+        const cursorP = document.getElementById('cursorP');
 
         const containerBotones1 = document.getElementById('containerBotones1');
 
@@ -194,6 +211,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const maxTop = window.innerHeight * 0.70; // equivalent to 80vh
         const proximityThreshold = 20; // proximity threshold in pixels
 
+        
         handle.addEventListener('mousedown', (e) => {
             isDraggingd3 = true;
             startY = e.clientY;
@@ -238,6 +256,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
 
+        
         draggableDiv.addEventListener('touchstart', (e) => {
             isDraggingd3 = true;
             startY = e.touches[0].clientY;
@@ -702,6 +721,7 @@ document.addEventListener('DOMContentLoaded', function () {
             scrollToTop();
             if (respuesta.value === '') {
                 ultimoBtnNO.style.visibility = 'hidden';
+                iguser.style.width = '70%'
             } else {
                 ultimoBtnNO.style.visibility = 'visible';
             }
@@ -709,6 +729,20 @@ document.addEventListener('DOMContentLoaded', function () {
 
         verificarInput();
         respuesta.addEventListener('input', verificarInput);
+
+        
+
+        function verificarInput2() {
+            scrollToTop();
+            if (iguser.value === '') {
+                cursorP.style.display = 'flex';
+            } else {
+                cursorP.style.display = 'none';
+            }
+        }
+
+        verificarInput2();
+        iguser.addEventListener('input', verificarInput2);
 
     });
 

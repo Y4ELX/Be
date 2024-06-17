@@ -152,12 +152,24 @@ body {
     text-align: center;
     font-family: mn;    
     height: 100%;
-    width: 100%;
+    width: 70%;
     font-size: 1.5vh;
     background-color: transparent;
     border: none;
-    margin-left: 2vh;
-    border-left: solid 0.2vh #f22a2a;
+    min-width: 1em;
+    transition: width ease 1s;
+    /* Ajusta este valor según tus necesidades */
+    box-sizing: content-box;
+}
+
+#width-helper {
+    font-family: inherit;
+    /* Asegúrate de que el estilo del texto coincida */
+    font-size: inherit;
+    font-weight: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    letter-spacing: inherit;
 }
 
 .imglogo{
@@ -493,7 +505,7 @@ body {
     background-color: #fe0000;
     border-radius: 0.4vh;
     transition: ease-out 1s;
-    width: 25%;
+    width: 2%;
     height: 1.9vh;
     position: absolute;
 }
@@ -559,6 +571,23 @@ body {
     animation: blink 1000ms infinite;
     animation-timing-function: step-start;
     z-index: 0;
+}
+
+.cursorP2{
+    position: absolute;
+    top: -1.8vh;
+    left: 10px;
+    color: #fe0000;
+    font-size: 3vh;
+    content: "█";
+    animation: blink 1000ms infinite;
+    animation-timing-function: step-start;
+    z-index: 0;
+    margin: 0px;
+    top: 0vh;
+    font-size: 2.5vh;
+    font-weight: 700;
+    left: 8.5vh;
 }
 
 @keyframes blink {

@@ -108,8 +108,11 @@
         <p id="relax" class="Q1" style="width: 95%; top: 60vh; position: absolute; font-size: 1.5vh;">SI NOS DEMORAMOS, RELAXXX! DE QUE TE LO HACEMOS LLEGAR, TE LO HACEMOS LLEGAR</p>
 
         <div id="IgBar" class="progressBar" style="flex-direction: row; justify-content: center; align-items: center;">
-            <img src="img/ig.png" style="margin-left: 2vh; height: 160%;" alt="">
-            <input autocomplete="off" autocapitalize="off" placeholder="¡QUIERO QUE ME LO ENVÍEN A INSTA!" type="text" class="iguser" id="iguser">
+            <img src="img/ig.png" style="height: 160%;" alt="">
+            <input oninput="adjustWidth(this)" autocomplete="off" autocapitalize="off" placeholder="¡QUIERO QUE ME LO ENVÍEN A INSTA!" type="text" class="iguser" id="iguser">
+            <p id="cursorP" class="cursorP2">|</p>
+
+            <span id="width-helper" style="position: absolute; visibility: hidden; white-space: pre;"></span>
         </div>
 
         <!--TODO 2222 SLIDEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR-->
@@ -178,7 +181,7 @@
 
                 <p class="cursorP">|</p>
             </div>
-            <button id="ultimoBtnNO" onclick="llenarInput('inputP3', document.getElementById('respuesta').value), mostrarQ4()" class="acceptBtn">Enviar</button>
+            <button id="ultimoBtnNO" onclick="llenarInput('inputP3', document.getElementById('respuesta').value), mostrarQ4()" class="acceptBtn">ENVIAR</button>
         </div>
 
         <form style="position: absolute; top: -110vh; padding-bottom: 30vh;"  name="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbyQZbHranPSYBTAsPN7lJYv_mkysEVvLya-xu6F_Q1nzICSfl533ik4Jz9fZpNo85kB/exec">

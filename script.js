@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const iguser = document.getElementById('iguser');
         const relax = document.getElementById('relax');
         const thunder = document.getElementById('thunder');
-        const cursorP = document.getElementById('cursorP');
+        const cursorP2 = document.getElementById('cursorP2');
 
         const containerBotones1 = document.getElementById('containerBotones1');
 
@@ -663,7 +663,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     fadeOut(thunder)
 
                     principalCont.style.backgroundColor = "#f22a2a"
-                    BeText.style.color = "white"
+                    BeText.src = "img/Betxtwhite.png"
 
                     containerTimer.style.position = "absolute"
                     containerTimer.style.top = "14vh"
@@ -735,9 +735,9 @@ document.addEventListener('DOMContentLoaded', function () {
         function verificarInput2() {
             scrollToTop();
             if (iguser.value === '') {
-                cursorP.style.display = 'flex';
+                cursorP2.style.display = 'flex';
             } else {
-                cursorP.style.display = 'none';
+                cursorP2.style.display = 'none';
             }
         }
 
@@ -802,7 +802,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         principalCont.style.backgroundColor = "#f22a2a"
 
-        BeText.style.color = "white"
+        BeText.src = "img/Betxtwhite.png"
         pTextoP.style = "transform: rotate(0deg) scale(1, 1)"
         pTextoP.style.justifyContent = "center"
         pTextoP.innerHTML = "<img style='height: 2.5vh' src='img/bomb.png'> CRACK!"
@@ -816,7 +816,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(function () {
             Utils.fadeOut(pTextoP)
             principalCont.style.backgroundColor = "#151515"
-            BeText.style.color = "#616161"
+            BeText.src = "img/Betxt.png"
 
             setTimeout(() => {
                 Utils.fadeIn(Q4)

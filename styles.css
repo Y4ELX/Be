@@ -29,11 +29,10 @@ body {
 
 .BeText{
     position: absolute;
-    font-family: dm;
     top: 5vh;
-    font-weight: 500;
     display: none;
-    color: #616161;
+
+    height: 3vh;
 }
 
 .principalCont::before {

@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function () {
             })
             .catch(error => {
                 console.error('¡Error!', error);
-                alert("¡Ha ocurrido un error al enviar el formulario!");
+                alert("Ha ocurrido un error al enviar tus respuestas, te invitamos a volver a intentarlo :)");
             });
     }
 
@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const relax = document.getElementById('relax');
         const thunder = document.getElementById('thunder');
         const cursorP2 = document.getElementById('cursorP2');
+        const divFlechaBtn = document.getElementById('divFlechaBtn');
 
         const containerBotones1 = document.getElementById('containerBotones1');
 
@@ -239,6 +240,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Snap to the nearest position
                     if (Math.abs(currentTop - minTop) < Math.abs(currentTop - maxTop)) {
                         draggableDiv.style.top = '10vh';
+                        draggableDiv.classList.remove('bouncing'); // Remove animation while dragging
                     } else {
                         draggableDiv.style.top = '80vh';
                     }
@@ -284,12 +286,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Snap to the nearest position
                     if (Math.abs(currentTop - minTop) < Math.abs(currentTop - maxTop)) {
                         draggableDiv.style.top = '10vh';
+                        draggableDiv.classList.remove('bouncing'); // Remove animation while dragging
                     } else {
                         draggableDiv.style.top = '70vh';
+
                     }
                 }
             }
         });
+
+        draggableDiv.classList.add('bouncing'); // Re-apply animation after dragging
 
         document.addEventListener('touchmove', (e) => {
             if (isDraggingd3) {
@@ -367,64 +373,132 @@ document.addEventListener('DOMContentLoaded', function () {
             element.classList.add('visible');
         }
 
+        let savedState = {};  // Objeto para guardar el estado
+
+        function saveState() {
+            savedState = {
+                sliderButtonLeft: sliderButton.style.left,
+                contInt: contInt,
+                timer: timer,
+                // Guardar estado de los elementos necesarios
+                Q1Visible: Q1.style.visibility,
+                progressBarVisible: progressBar.style.visibility,
+                containerBotones1Visible: containerBotones1.style.visibility,
+                // Agregar aquí todos los elementos y variables necesarias
+            };
+        }
+
+        function restoreState() {
+            sliderButton.style.left = savedState.sliderButtonLeft;
+            contInt = savedState.contInt;
+            console.log(savedState.contInt)
+            timer = savedState.timer;
+            // Restaurar estado de los elementos necesarios
+            Q1.style.visibility = savedState.Q1Visible;
+            progressBar.style.visibility = savedState.progressBarVisible;
+            containerBotones1.style.visibility = savedState.containerBotones1Visible;
+            // Agregar aquí todos los elementos y variables necesarias
+        }
+
+        function resetTimer() {
+            containerTimer.style.position = "relative"
+            containerTimer.style.top = "unset"
+            containerTimer.style.color = "#363636"
+
+            nomDigS.style.color = "white"
+            nomDigM.style.color = "#white"
+            
+            timer = 30000; // Reinicias el temporizador al valor inicial o al necesario
+            timerIsActive = false; // Asegúrate de que el temporizador esté activo
+            intervalId = setInterval(moveFirstDivToEnd, 1000); // Reinicia el intervalo del temporizador
+            // Otras acciones necesarias para reiniciar el temporizador
+        }
+
         var contInt = 0;
 
         function endDragging(e) {
             if (isDragging) {
-
                 if (contInt == 0) {
                     isDragging = false;
-                    Q1.style.visibility = "visible"
-                    progressBar.style.visibility = "visible"
-                    progressBar.style.pointerEvents = "all"
-                    containerBotones1.style.visibility = "visible"
-                    containerBotones1.style.pointerEvents = "all"
-                    sliderButton.style.transition = 'left 0.3s';
-                    sliderButton.style.transition = 'background-color 0.5s';
-
+                    
                     if (parseInt(sliderButton.style.left, 10) >= maxLeft) {
+                        containerTimer.style.visibility = "hidden";
+                        bar.style.width = "2%"
+                        error.style.color = "#bdbdbd89"
+                        error.innerHTML = "<span style='color: #fe0000;' id='numeroP'>1</span>/3";
+                        error.style.margin = "0px"
+                        error.style.marginLeft = "90%"
+                        error.style.width = "10%"
+
+                        respuesta.value = "";
+                        divFlechaBtn.style.visibility = 'hidden';
+
+                        Utils.fadeOut(containerBotones1)
+                        Utils.fadeOut(containerBotones2)
+                        Utils.fadeOut(containerBotones25)
+                        Utils.fadeOut(containerBotones3)
+
+                        fadeOut(containerBotones1)
+                        fadeOut(containerBotones2)
+                        fadeOut(containerBotones25)
+                        fadeOut(containerBotones3)
+
+
+                        Q1.style.visibility = "visible";
+                        progressBar.style.visibility = "visible";
+                        progressBar.style.pointerEvents = "all";
+                        containerBotones1.style.visibility = "visible";
+                        containerBotones1.style.pointerEvents = "all";
+                        sliderButton.style.transition = 'left 0.3s';
+                        sliderButton.style.transition = 'background-color 0.5s';
+
+
                         console.log('DESLIZADO');
 
-                        fadeOut(imglogo)
+                        fadeOut(imglogo);
                         fadeOut(sliderCont);
                         fadeOut(omiedo);
-                        fadeOut(pTextoP)
-                        fadeOut(tobravesouls)
+                        fadeOut(pTextoP);
+                        fadeOut(tobravesouls);
 
-                        principalCont.style.backgroundColor = "#151515"
+                        principalCont.style.backgroundColor = "#151515";
 
                         setTimeout(function () {
-
                             textRead.innerHTML = "<span id='sabiamos'>SABÍAMOS </span><span id='que1'>QUE </span><br><span id='dirias'>DIRÍAS </span><span id='que2'>QUE </span><span id='si'>SÍ</span>";
 
                             setTimeout(function () {
-                                fadeIn(BeText)
+                                fadeIn(BeText);
                                 fadeIn(textRead);
 
                                 setTimeout(function () {
-                                    document.getElementById('sabiamos').style.color = "#ffffff"
+                                    document.getElementById('sabiamos').style.color = "#ffffff";
 
                                     setTimeout(function () {
-                                        document.getElementById('sabiamos').style.color = "#525252"
-                                        document.getElementById('que1').style.color = "#ffffff"
+                                        document.getElementById('sabiamos').style.color = "#525252";
+                                        document.getElementById('que1').style.color = "#ffffff";
 
                                         setTimeout(function () {
-                                            document.getElementById('que1').style.color = "#525252"
-                                            document.getElementById('dirias').style.color = "#ffffff"
+                                            document.getElementById('que1').style.color = "#525252";
+                                            document.getElementById('dirias').style.color = "#ffffff";
 
                                             setTimeout(function () {
-                                                document.getElementById('dirias').style.color = "#525252"
-                                                document.getElementById('que2').style.color = "#ffffff"
+                                                document.getElementById('dirias').style.color = "#525252";
+                                                document.getElementById('que2').style.color = "#ffffff";
 
                                                 setTimeout(function () {
-                                                    document.getElementById('que2').style.color = "#525252"
-                                                    document.getElementById('si').style.color = "#ffffff"
+                                                    document.getElementById('que2').style.color = "#525252";
+                                                    document.getElementById('si').style.color = "#ffffff";
 
                                                     setTimeout(function () {
-                                                        document.getElementById('si').style.color = "#525252"
-                                                        fadeOut(textRead)
+                                                        document.getElementById('si').style.color = "#525252";
+                                                        fadeOut(textRead);
                                                         setTimeout(function () {
+                                                            saveState();
                                                             contInt++;
+
+                                                            console.log(contInt)
+                                                            resetTimer();
+                                                            containerTimer.style.visibility = "visible";
                                                             mostrarQ1();
                                                         }, 1000);
                                                     }, 400);
@@ -435,14 +509,11 @@ document.addEventListener('DOMContentLoaded', function () {
                                 }, 1000);
                             }, 500);
                         }, 1000);
-
-
-
                     } else {
                         sliderButton.style.left = '0px';
                     }
                 } else {
-                    location.reload();
+
                 }
             }
         }
@@ -459,7 +530,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     fadeOut(pTextoP);
                     fadeOut(IgBar);
                     fadeOut(containerQR)
-                    fadeOut(sliderContainer2)
+                    fadeOut(sliderCont2)
+                    fadeOut(sliderCont3)
                     principalCont.style.backgroundColor = "black"
                     principalCont.style.backgroundImage = "url('img/bggif.gif')"
                     fadeIn(draggablediv)
@@ -669,46 +741,54 @@ document.addEventListener('DOMContentLoaded', function () {
                     containerTimer.style.top = "14vh"
                     containerTimer.style.color = "white"
 
-                    nomDigS.style.color = "white"
-                    nomDigM.style.color = "white"
-                    pTextoP.style = "transform: rotate(0deg) scale(1, 1)"
-                    pTextoP.style.fontSize = "2vh"
-                    pTextoP.innerHTML = "<img style='height: 1.5vh' src='img/circus.png'> EY, EY EY QUE PASÓ<br><br><span style='color: #ffffffbf' id='avisamosDSP'></span>"
-                    var textElement = document.getElementById('avisamosDSP');
-                    fadeIn(pTextoP)
-
-                    const textContent = "DESPUÉS NO DIGAS QUE NO TE AVISAMOS";
-                    let index = 0;
-
-                    function writeText() {
-                        textElement.innerHTML = textContent.slice(0, index);
-                        index++;
-
-                        if (index <= textContent.length) {
-                            setTimeout(writeText, 100);
-                        }
-                    }
-
-                    writeText();
-                    
-                    textElement.classList.add('blinking');
-
-
-                    sliderButton.innerHTML = "CANGREJEAR"
-                    sliderContainer.style.position = "absolute"
-                    sliderContainer.style.top = "60vh"
-                    sliderButton.style.left = '0px';
-                    omiedo.style.position = "absolute"
-                    omiedo.style.top = "64vh"
-                    omiedo.style.fontSize = "1.3vh"
-                    omiedo.style.color = "#ffffffd0"
-                    omiedo.innerHTML = "NO SOMOS TU EX, PERO TE DAMOS<br>OTRA OPORTUNIDAD"
-
                     setTimeout(() => {
-                        fadeIn(sliderContainer)
+                        nomDigS.style.color = "white"
+                        nomDigM.style.color = "white"
+                        pTextoP.style = "transform: rotate(0deg) scale(1, 1)"
+                        pTextoP.style.fontSize = "2vh"
+                        pTextoP.innerHTML = "<img style='height: 1.5vh' src='img/circus.png'> EY, EY EY QUE PASÓ<br><br><span style='color: #ffffffbf' id='avisamosDSP'></span>"
+                        var textElement = document.getElementById('avisamosDSP');
+                        fadeIn(pTextoP)
+
+                        restoreState();
+
                         setTimeout(() => {
-                            fadeIn(omiedo)
-                        }, 100);
+                            const textContent = "DESPUÉS NO DIGAS QUE NO TE AVISAMOS";
+                            let index = 0;
+
+                            function writeText() {
+                                textElement.innerHTML = textContent.slice(0, index);
+                                index++;
+
+                                if (index <= textContent.length) {
+                                    setTimeout(writeText, 100);
+                                }
+                            }
+
+                            writeText();
+
+                            textElement.classList.add('blinking');
+
+
+                            setTimeout(() => {
+                                sliderButton.innerHTML = "CANGREJEAR"
+                                sliderContainer.style.position = "absolute"
+                                sliderContainer.style.top = "60vh"
+                                sliderButton.style.left = '0px';
+                                omiedo.style.position = "absolute"
+                                omiedo.style.top = "64vh"
+                                omiedo.style.fontSize = "1.3vh"
+                                omiedo.style.color = "#ffffffd0"
+                                omiedo.innerHTML = "NO SOMOS TU EX, PERO TE DAMOS<br>OTRA OPORTUNIDAD"
+
+                                setTimeout(() => {
+                                    fadeIn(sliderContainer)
+                                    setTimeout(() => {
+                                        fadeIn(omiedo)
+                                    }, 1000);
+                                }, 1000);
+                            }, 3000);
+                        }, 1000);
                     }, 1000);
                 }
             }
@@ -720,10 +800,9 @@ document.addEventListener('DOMContentLoaded', function () {
         function verificarInput() {
             scrollToTop();
             if (respuesta.value === '') {
-                ultimoBtnNO.style.visibility = 'hidden';
-                iguser.style.width = '70%'
+                divFlechaBtn.style.visibility = 'hidden';
             } else {
-                ultimoBtnNO.style.visibility = 'visible';
+                divFlechaBtn.style.visibility = 'visible';
             }
         }
 
@@ -736,6 +815,7 @@ document.addEventListener('DOMContentLoaded', function () {
             scrollToTop();
             if (iguser.value === '') {
                 cursorP2.style.display = 'flex';
+                iguser.style.width = '80%'
             } else {
                 cursorP2.style.display = 'none';
             }
@@ -775,8 +855,8 @@ document.addEventListener('DOMContentLoaded', function () {
     function mostrarQ3() {
         bar.style.width = "5%"
         numeroP.innerHTML = " ";
-        error.style.marginLeft = "10%";
-        error.style.width = "90%";
+        error.style.margin = "0px";
+        error.style.width = "100%";
         error.style.color = "#fe0000";
         error.innerHTML = "OOOPPS! ESTA SE NOS PASÓ ¿ERROR...";
 
@@ -851,30 +931,35 @@ document.addEventListener('DOMContentLoaded', function () {
                                                     Utils.fadeIn(pTextoP)
                                                     setTimeout(() => {
                                                         Utils.fadeIn(containerQR)
-                                                        Utils.fadeIn(Qr4)
-                                                        Utils.fadeIn(IgBar)
+                                                            Utils.fadeIn(Qr4)
 
-                                                        function verificarInputIG() {
-                                                            if (iguser.value === '') {
-                                                                sliderCont3.style.top = "-200vh"
-                                                                setTimeout(() => {
-                                                                    sliderCont2.style.top = "75vh"
-                                                                    Utils.fadeIn(sliderCont2)
-                                                                }, 5000);
-                                                            } else {
-                                                                sliderCont2.style.top = "-200vh"
-                                                                setTimeout(() => {
-                                                                    sliderCont3.style.top = "75vh"
-                                                                    Utils.fadeIn(sliderCont3)
-                                                                    Utils.fadeIn(relax)
-                                                                }, 200);
+                                                        setTimeout(() => {
+                                                            Utils.fadeIn(IgBar)
+
+                                                            function verificarInputIG() {
+                                                                if (iguser.value === '') {
+                                                                    Utils.fadeOut(sliderCont3)
+                                                                    sliderCont3.style.top = "-200vh"
+                                                                    setTimeout(() => {
+                                                                        sliderCont2.style.top = "75vh"
+                                                                        Utils.fadeIn(sliderCont2)
+                                                                    }, 5000);
+                                                                } else {
+                                                                    sliderCont2.style.top = "-200vh"
+                                                                    setTimeout(() => {
+                                                                        sliderCont3.style.top = "75vh"
+                                                                        Utils.fadeOut(sliderCont2)
+                                                                        Utils.fadeIn(sliderCont3)
+                                                                        Utils.fadeIn(relax)
+                                                                    }, 200);
+                                                                }
                                                             }
-                                                        }
 
-                                                        verificarInputIG();
-                                                        iguser.addEventListener('input', verificarInputIG);
+                                                            verificarInputIG();
+                                                            iguser.addEventListener('input', verificarInputIG);
+                                                        }, 1000);
                                                         
-                                                    }, 1000);
+                                                    }, 2000);
                                                 }, 400);
                                             }, 400);
                                         }, 400);

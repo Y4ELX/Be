@@ -26,6 +26,7 @@
     <link rel="preload" href="img/bggif.gif" as="image">
     <link rel="preload" href="img/noise.gif" as="image">
     <link rel="preload" href="img/arrow.gif" as="image">
+    <link rel="preload" href="img/arrowd.gif" as="image">
     <link rel="preload" href="img/uncommon.png" as="image">
     <link rel="preload" href="img/logo.png" as="image">
     <link rel="preload" href="img/letterB.png" as="image">
@@ -110,7 +111,7 @@
             <div class="slider-button3" id="sliderButton3">CONFIRMOOO</div>
         </div>
 
-        <p id="relax" class="Q1" style="width: 95%; top: 60vh; position: absolute; font-size: 1.5vh;">SI NOS DEMORAMOS, RELAXXX! DE QUE TE LO HACEMOS LLEGAR, TE LO HACEMOS LLEGAR</p>
+        <p id="relax" class="Q1" style="width: 90%; top: 60vh; position: absolute; font-size: 1.5vh;">SI NOS DEMORAMOS, RELAXXX! DE QUE TE LO HACEMOS LLEGAR, TE LO HACEMOS LLEGAR</p>
 
         <div id="IgBar" class="progressBar" style="flex-direction: row; justify-content: center; align-items: center;">
             <img src="img/ig.png" style="height: 160%;" alt="">
@@ -186,7 +187,13 @@
 
                 <p class="cursorP">|</p>
             </div>
-            <button id="ultimoBtnNO" onclick="llenarInput('inputP3', document.getElementById('respuesta').value), mostrarQ4()" class="acceptBtn">ENVIAR</button>
+
+            <div id="divFlechaBtn" class="divFlechaBtn">
+                <img src="img/arrowred.png" style="width: 50%; margin-right: 10%;" alt="">
+                <button id="ultimoBtnNO" onclick="llenarInput('inputP3', document.getElementById('respuesta').value), mostrarQ4()"
+                    class="acceptBtn">ENVIAR</button>
+
+            </div>
         </div>
 
         <form style="position: absolute; top: -110vh; padding-bottom: 30vh;"  name="contact-form" method="post" action="https://script.google.com/macros/s/AKfycbyQZbHranPSYBTAsPN7lJYv_mkysEVvLya-xu6F_Q1nzICSfl533ik4Jz9fZpNo85kB/exec">

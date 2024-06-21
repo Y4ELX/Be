@@ -555,12 +555,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     fadeOut(relax)
                     fadeOut(IgBar)
                     fadeOut(sliderCont2)
+                    fadeOut(sliderContainer2)
                     fadeOut(pTextoP);
                     fadeOut(containerQR)
                     fadeOut(sliderContainer3)
                     principalCont.style.backgroundColor = "black"
                     principalCont.style.backgroundImage = "url('img/bggif.gif')"
                     fadeIn(draggablediv)
+                    sliderCont2.style.visibility = "hidden"
+                    sliderContainer2.style.visibility = "hidden"
+                    sliderCont3.style.visibility = "hidden"
+                    sliderContainer3.style.visibility = "hidden"
 
                 } else {
                     sliderButton3.style.left = '0px';

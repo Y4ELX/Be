@@ -751,10 +751,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         nomDigM.style.color = "white"
                         pTextoP.style = "transform: rotate(0deg) scale(1, 1)"
                         pTextoP.style.fontSize = "2vh"
-                        const avisamosDSP = document.getElementById('avisamosDSP');
-                        avisamosDSP.style.fontSize = "1.7vh"
                         pTextoP.innerHTML = "<img style='height: 1.5vh' src='img/circus.png'> EY, EY EY QUE PASÓ<br><br><span style='color: #ffffffbf' id='avisamosDSP'></span>"
                         var textElement = document.getElementById('avisamosDSP');
+                        textElement.style.fontSize = "1.7vh"
                         fadeIn(pTextoP)
 
                         restoreState();

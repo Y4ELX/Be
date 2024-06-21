@@ -711,6 +711,10 @@ body {
     cursor: grab;
 }
 
+input[type="search"] {
+    -webkit-appearance: none;
+}
+
 .bouncing {
     animation: softBounce 3s infinite ease-in-out;
     /* Aplica la animación con easing */

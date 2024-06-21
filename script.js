@@ -369,8 +369,10 @@ document.addEventListener('DOMContentLoaded', function () {
             // Forzar reflujo para asegurarse de que la transición ocurra
             element.offsetWidth;
 
-            // Agregar la clase que cambia la opacidad a 1
-            element.classList.add('visible');
+            setTimeout(() => {
+                // Agregar la clase que cambia la opacidad a 1
+                element.classList.add('visible');
+            }, 1000);
         }
 
         let savedState = {};  // Objeto para guardar el estado

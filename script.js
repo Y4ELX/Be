@@ -466,7 +466,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         principalCont.style.backgroundColor = "#151515";
 
                         setTimeout(function () {
-                            textRead.innerHTML = "<span id='sabiamos'>SABÍAMOS </span><span id='que1'>QUE </span><br><span id='dirias'>DIRÍAS </span><span id='que2'>QUE </span><span id='si'>SÍ</span>";
+                            textRead.innerHTML = "<span id='sabiamos'>SABÍAMOS </span><span id='que1'>QUE </span><br><span id='dirias'>DIRÍAS </span><span id='que2'>QUE </span><span id='si'>SI</span>";
 
                             setTimeout(function () {
                                 fadeIn(BeText);

@@ -711,7 +711,7 @@ body {
     cursor: grab;
 }
 
-input[type="search"] {
+input{
     -webkit-appearance: none;
 }
 

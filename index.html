@@ -23,7 +23,6 @@
     <link rel="preload" href="img/noBtn.png" as="image">
     <link rel="preload" href="img/bomb.png" as="image">
     <link rel="preload" href="img/circus.png" as="image">
-    <link rel="preload" href="img/bggif.gif" as="image">
     <link rel="preload" href="img/noise.gif" as="image">
     <link rel="preload" href="img/arrow.gif" as="image">
     <link rel="preload" href="img/arrowd.gif" as="image">
@@ -32,6 +31,7 @@
     <link rel="preload" href="img/letterB.png" as="image">
     <link rel="preload" href="img/ig.png" as="image">
     <link rel="preload" href="img/polaroid.png" as="image">
+    <link rel="preload" href="img/bgFV.mp4" as="video" type="video/mp4">
 
     <title>Be.</title>
 </head>
@@ -39,6 +39,11 @@
 
     <!--GIF Div-->
     <div id="principalCont" class="principalCont">
+
+        <video id="bgVideo" loop autoplay muted class="videoMP4">
+            <source src="img/bgFV.mp4" type="video/mp4">
+            Tu navegador no soporta el tag de video.
+        </video>
 
         <div id="copiadoDiv" style="display: none; position: absolute; top: 85%; background-color: #9b9b9b39; color: white; padding: 2vh; border-radius: 2vh; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 900;">
             Copiado
@@ -113,7 +118,7 @@
 
         <p id="relax" class="Q1" style="width: 90%; top: 60vh; position: absolute; font-size: 1.5vh;">SI NOS DEMORAMOS, RELAXXX! DE QUE TE LO HACEMOS LLEGAR, TE LO HACEMOS LLEGAR</p>
 
-        <div id="IgBar" class="progressBar" style="flex-direction: row; justify-content: center; align-items: center;">
+        <div id="IgBar" class="progressBar" style="flex-direction: row; justify-content: center; align-items: center; opacity: 0;">
             <img src="img/ig.png" style="height: 160%;" alt="">
             <input oninput="adjustWidth(this)" autocomplete="off" autocapitalize="off" placeholder="¡QUIERO QUE ME LO ENVÍEN A INSTA!" type="text" class="iguser" id="iguser">
             <p id="cursorP2" class="cursorP2">|</p>

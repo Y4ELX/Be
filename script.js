@@ -139,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const thunder = document.getElementById('thunder');
         const cursorP2 = document.getElementById('cursorP2');
         const divFlechaBtn = document.getElementById('divFlechaBtn');
+        const bgVideo = document.getElementById('bgVideo');
 
         const containerBotones1 = document.getElementById('containerBotones1');
 
@@ -535,7 +536,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     fadeOut(sliderCont2)
                     fadeOut(sliderCont3)
                     principalCont.style.backgroundColor = "black"
-                    principalCont.style.backgroundImage = "url('img/bggif.gif')"
+                    setTimeout(() => {
+                        bgVideo.style.opacity = "0.2"
+                    }, 1000);
                     fadeIn(draggablediv)
 
                 } else {
@@ -561,9 +564,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     fadeOut(pTextoP);
                     fadeOut(containerQR)
                     fadeOut(sliderContainer3)
+
                     principalCont.style.backgroundColor = "black"
-                    principalCont.style.backgroundImage = "url('img/bggif.gif')"
-                    fadeIn(draggablediv)
+                    setTimeout(() => {
+                        bgVideo.style.opacity = "0.2"
+                    }, 1000);                    fadeIn(draggablediv)
                     sliderCont2.style.visibility = "hidden"
                     sliderContainer2.style.visibility = "hidden"
                     sliderCont3.style.visibility = "hidden"
@@ -753,49 +758,81 @@ document.addEventListener('DOMContentLoaded', function () {
                         nomDigM.style.color = "white"
                         pTextoP.style = "transform: rotate(0deg) scale(1, 1)"
                         pTextoP.style.fontSize = "2vh"
-                        pTextoP.innerHTML = "<img style='height: 1.5vh' src='img/circus.png'> EY, EY EY QUE PASÓ<br><br><span style='color: #ffffffbf' id='avisamosDSP'></span>"
-                        var textElement = document.getElementById('avisamosDSP');
-                        textElement.style.fontSize = "1.7vh"
+                        pTextoP.style.color = "#ffffffbf"
+                        pTextoP.style.transition = "ease-in-out 1s;"
+                        pTextoP.innerHTML = "<img style='height: 1.5vh' src='img/circus.png'> <span id='ey1'>EY,</span><span id='ey2'> EY</span><span id='ey3'> EY</span><span id='queE'> QUE</span><span id='pasoE'> PASÓ</span><br><br><span style='color: #ffffffbf' id='avisamosDSP'></span>"
+                        
                         fadeIn(pTextoP)
 
-                        restoreState();
+                        setTimeout(function () {
+                            document.getElementById('ey1').style.color = "#ffffff";
 
-                        setTimeout(() => {
-                            const textContent = "DESPUÉS NO DIGAS QUE NO TE AVISAMOS";
-                            let index = 0;
+                            setTimeout(function () {
+                                document.getElementById('ey1').style.color = "#ffffffbf";
+                                document.getElementById('ey2').style.color = "#ffffff";
 
-                            function writeText() {
-                                textElement.innerHTML = textContent.slice(0, index);
-                                index++;
+                                setTimeout(function () {
+                                    document.getElementById('ey2').style.color = "#ffffffbf";
+                                    document.getElementById('ey3').style.color = "#ffffff";
 
-                                if (index <= textContent.length) {
-                                    setTimeout(writeText, 100);
-                                }
-                            }
+                                    setTimeout(function () {
+                                        document.getElementById('ey3').style.color = "#ffffffbf";
+                                        document.getElementById('queE').style.color = "#ffffff";
 
-                            writeText();
+                                        setTimeout(function () {
+                                            document.getElementById('queE').style.color = "#ffffffbf";
+                                            document.getElementById('pasoE').style.color = "#ffffff";
 
-                            textElement.classList.add('blinking');
+                                            setTimeout(function () {
+                                                document.getElementById('pasoE').style.color = "#ffffffbf";
+
+                                                var textElement = document.getElementById('avisamosDSP');
+                                                textElement.style.fontSize = "1.7vh"
+
+                                                restoreState();
+
+                                                setTimeout(() => {
+                                                    const textContent = "DESPUÉS NO DIGAS QUE NO TE AVISAMOS";
+                                                    let index = 0;
+
+                                                    function writeText() {
+                                                        textElement.innerHTML = textContent.slice(0, index);
+                                                        index++;
+
+                                                        if (index <= textContent.length) {
+                                                            setTimeout(writeText, 100);
+                                                        }
+                                                    }
+
+                                                    writeText();
+
+                                                    textElement.classList.add('blinking');
 
 
-                            setTimeout(() => {
-                                sliderButton.innerHTML = "CANGREJEAR"
-                                sliderContainer.style.position = "absolute"
-                                sliderContainer.style.top = "60vh"
-                                sliderButton.style.left = '0px';
-                                omiedo.style.position = "absolute"
-                                omiedo.style.top = "64vh"
-                                omiedo.style.fontSize = "1.3vh"
-                                omiedo.style.color = "#ffffffd0"
-                                omiedo.innerHTML = "NO SOMOS TU EX, PERO TE DAMOS<br>OTRA OPORTUNIDAD"
+                                                    setTimeout(() => {
+                                                        sliderButton.innerHTML = "CANGREJEAR"
+                                                        sliderContainer.style.position = "absolute"
+                                                        sliderContainer.style.top = "60vh"
+                                                        sliderButton.style.left = '0px';
+                                                        omiedo.style.position = "absolute"
+                                                        omiedo.style.top = "64vh"
+                                                        omiedo.style.fontSize = "1.3vh"
+                                                        omiedo.style.color = "#ffffffd0"
+                                                        omiedo.innerHTML = "NO SOMOS TU EX, PERO TE DAMOS<br>OTRA OPORTUNIDAD"
 
-                                setTimeout(() => {
-                                    fadeIn(sliderContainer)
-                                    setTimeout(() => {
-                                        fadeIn(omiedo)
-                                    }, 1000);
-                                }, 1000);
-                            }, 3000);
+                                                        setTimeout(() => {
+                                                            fadeIn(sliderContainer)
+                                                            setTimeout(() => {
+                                                                fadeIn(omiedo)
+                                                            }, 1000);
+                                                        }, 1000);
+                                                    }, 3000);
+                                                }, 1000);
+                                            }, 400);
+                                        }, 400);
+                                    }, 400);
+                                }, 400);
+                            }, 400);
                         }, 1000);
                     }, 1000);
                 }
@@ -940,10 +977,10 @@ document.addEventListener('DOMContentLoaded', function () {
                                                     setTimeout(() => {
                                                         Utils.fadeIn(containerQR)
                                                             Utils.fadeIn(Qr4)
-
-                                                        setTimeout(() => {
                                                             Utils.fadeIn(IgBar)
 
+                                                        setTimeout(() => {
+                                                            IgBar.style.opacity = "1"
                                                             function verificarInputIG() {
                                                                 if (iguser.value === '') {
                                                                     Utils.fadeOut(sliderCont3)

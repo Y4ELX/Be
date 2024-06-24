@@ -736,7 +736,7 @@ input[type="submit"] {
 }
 
 .bouncing {
-    animation: softBounce 3s infinite ease-in-out;
+    animation: softBounce 1.5s infinite ease-in-out;
     /* Aplica la animación con easing */
 }
 

@@ -837,6 +837,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     containerTimer.style.color = "white"
 
                     setTimeout(() => {
+                        BeText.src = "img/Betxtwhite.png"
                         nomDigS.style.color = "white"
                         nomDigM.style.color = "white"
                         pTextoP.style = "transform: rotate(0deg) scale(1, 1)"

@@ -6,24 +6,6 @@
         document.getElementById(id).value = ans;
     }
 
-    function adjustWidth(input) {
-        var helper = document.getElementById('width-helper');
-
-        // Copia el valor del input al helper
-        helper.textContent = input.value;
-
-        // Calcula el nuevo ancho
-        var newWidth = helper.offsetWidth;
-
-        if(input.value==''){
-            setTimeout(() => {
-                input.style.width = '80%'
-            }, 1000);
-        }else{
-            input.style.width = newWidth+10 + 'px';
-        }
-    }
-
     function onKeyboardOnOff(isOpen) {
         // Write down your handling code
         if (isOpen) {

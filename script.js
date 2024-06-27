@@ -645,6 +645,8 @@ document.addEventListener('DOMContentLoaded', function () {
                         bgVideo.muted = true;
                         bgVideo.play();
                     }, 1000);
+                    
+                    document.body.style.overflow = 'auto';
                     fadeIn(draggablediv)
 
                 } else {

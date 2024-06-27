@@ -16,7 +16,9 @@
         var newWidth = helper.offsetWidth;
 
         if(input.value==''){
-            input.style.width = '70%'
+            setTimeout(() => {
+                input.style.width = '80%'
+            }, 1000);
         }else{
             input.style.width = newWidth+10 + 'px';
         }
@@ -381,7 +383,6 @@ document.addEventListener('DOMContentLoaded', function () {
         function saveState() {
             savedState = {
                 sliderButtonLeft: sliderButton.style.left,
-                contInt: contInt,
                 timer: timer,
                 // Guardar estado de los elementos necesarios
                 Q1Visible: Q1.style.visibility,
@@ -393,8 +394,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function restoreState() {
             sliderButton.style.left = savedState.sliderButtonLeft;
-            contInt = savedState.contInt;
-            console.log(savedState.contInt)
             timer = savedState.timer;
             // Restaurar estado de los elementos necesarios
             Q1.style.visibility = savedState.Q1Visible;
@@ -421,103 +420,183 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function endDragging(e) {
             if (isDragging) {
-                if (contInt == 0) {
                     isDragging = false;
                     
                     if (parseInt(sliderButton.style.left, 10) >= maxLeft) {
-                        containerTimer.style.visibility = "hidden";
-                        bar.style.width = "2%"
-                        error.style.color = "#bdbdbd89"
-                        error.innerHTML = "<span style='color: #fe0000;' id='numeroP'>1</span>/3";
-                        error.style.margin = "0px"
-                        error.style.marginLeft = "90%"
-                        error.style.width = "10%"
+                        
+                        //Checar si es la primera vez que se desliza
+                        if(contInt==0){
+                            containerTimer.style.visibility = "hidden";
+                            bar.style.width = "2%"
+                            error.style.color = "#bdbdbd89"
+                            error.innerHTML = "<span style='color: #fe0000;' id='numeroP'>1</span>/3";
+                            error.style.margin = "0px"
+                            error.style.marginLeft = "90%"
+                            error.style.width = "10%"
 
-                        respuesta.value = "";
-                        divFlechaBtn.style.visibility = 'hidden';
+                            respuesta.value = "";
+                            divFlechaBtn.style.visibility = 'hidden';
 
-                        Utils.fadeOut(containerBotones1)
-                        Utils.fadeOut(containerBotones2)
-                        Utils.fadeOut(containerBotones25)
-                        Utils.fadeOut(containerBotones3)
+                            Utils.fadeOut(containerBotones1)
+                            Utils.fadeOut(containerBotones2)
+                            Utils.fadeOut(containerBotones25)
+                            Utils.fadeOut(containerBotones3)
 
-                        fadeOut(containerBotones1)
-                        fadeOut(containerBotones2)
-                        fadeOut(containerBotones25)
-                        fadeOut(containerBotones3)
-
-
-                        Q1.style.visibility = "visible";
-                        progressBar.style.visibility = "visible";
-                        progressBar.style.pointerEvents = "all";
-                        containerBotones1.style.visibility = "visible";
-                        containerBotones1.style.pointerEvents = "all";
-                        sliderButton.style.transition = 'left 0.3s';
-                        sliderButton.style.transition = 'background-color 0.5s';
+                            fadeOut(containerBotones1)
+                            fadeOut(containerBotones2)
+                            fadeOut(containerBotones25)
+                            fadeOut(containerBotones3)
 
 
-                        console.log('DESLIZADO');
+                            Q1.style.visibility = "visible";
+                            progressBar.style.visibility = "visible";
+                            progressBar.style.pointerEvents = "all";
+                            containerBotones1.style.visibility = "visible";
+                            containerBotones1.style.pointerEvents = "all";
+                            sliderButton.style.transition = 'left 0.3s';
+                            sliderButton.style.transition = 'background-color 0.5s';
 
-                        fadeOut(imglogo);
-                        fadeOut(sliderCont);
-                        fadeOut(omiedo);
-                        fadeOut(pTextoP);
-                        fadeOut(tobravesouls);
 
-                        principalCont.style.backgroundColor = "#151515";
+                            console.log('DESLIZADO');
 
-                        setTimeout(function () {
-                            textRead.innerHTML = "<span id='sabiamos'>SABÍAMOS </span><span id='que1'>QUE </span><br><span id='dirias'>DIRÍAS </span><span id='que2'>QUE </span><span id='si'>SI</span>";
+                            omiedo.style.opacity = "0"
+                            sliderCont.style.opacity = "0"
+                            pTextoP.style.opacity = "0"
+
+                            fadeOut(imglogo);
+                            fadeOut(tobravesouls);
+
+                            setTimeout(() => {
+                                fadeOut(sliderCont);
+                                fadeOut(omiedo);
+                                fadeOut(pTextoP);
+                            }, 1000);
+
+                            principalCont.style.backgroundColor = "#151515";
 
                             setTimeout(function () {
-                                fadeIn(BeText);
-                                fadeIn(textRead);
+                                textRead.innerHTML = "<span id='sabiamos'>SABÍAMOS </span><span id='que1'>QUE </span><br><span id='dirias'>DIRÍAS </span><span id='que2'>QUE </span><span id='si'>SI</span>";
 
                                 setTimeout(function () {
-                                    document.getElementById('sabiamos').style.color = "#ffffff";
+                                    fadeIn(BeText);
+                                    fadeIn(textRead);
 
                                     setTimeout(function () {
-                                        document.getElementById('sabiamos').style.color = "#525252";
-                                        document.getElementById('que1').style.color = "#ffffff";
+                                        document.getElementById('sabiamos').style.color = "#ffffff";
 
                                         setTimeout(function () {
-                                            document.getElementById('que1').style.color = "#525252";
-                                            document.getElementById('dirias').style.color = "#ffffff";
+                                            document.getElementById('sabiamos').style.color = "#525252";
+                                            document.getElementById('que1').style.color = "#ffffff";
 
                                             setTimeout(function () {
-                                                document.getElementById('dirias').style.color = "#525252";
-                                                document.getElementById('que2').style.color = "#ffffff";
+                                                document.getElementById('que1').style.color = "#525252";
+                                                document.getElementById('dirias').style.color = "#ffffff";
 
                                                 setTimeout(function () {
-                                                    document.getElementById('que2').style.color = "#525252";
-                                                    document.getElementById('si').style.color = "#ffffff";
+                                                    document.getElementById('dirias').style.color = "#525252";
+                                                    document.getElementById('que2').style.color = "#ffffff";
 
                                                     setTimeout(function () {
-                                                        document.getElementById('si').style.color = "#525252";
-                                                        fadeOut(textRead);
-                                                        setTimeout(function () {
-                                                            saveState();
-                                                            contInt++;
+                                                        document.getElementById('que2').style.color = "#525252";
+                                                        document.getElementById('si').style.color = "#ffffff";
 
-                                                            console.log(contInt)
-                                                            resetTimer();
-                                                            containerTimer.style.visibility = "visible";
-                                                            mostrarQ1();
-                                                        }, 1000);
+                                                        setTimeout(function () {
+                                                            document.getElementById('si').style.color = "#525252";
+                                                            fadeOut(textRead);
+
+                                                            //Empezar desde aquí
+                                                            setTimeout(function () {
+                                                                saveState();
+                                                                contInt++;
+
+                                                                console.log(contInt)
+                                                                resetTimer();
+                                                                containerTimer.style.visibility = "visible";
+                                                                mostrarQ1();
+                                                            }, 1000);
+                                                        }, 400);
                                                     }, 400);
                                                 }, 400);
                                             }, 400);
                                         }, 400);
-                                    }, 400);
+                                    }, 1000);
+                                }, 500);
+                            }, 1000);
+                        }else{
+                            //todo SLider >0 INTENTO
+                                containerTimer.style.visibility = "hidden";
+                                bar.style.width = "2%"
+                                error.style.color = "#bdbdbd89"
+                                error.innerHTML = "<span style='color: #fe0000;' id='numeroP'>1</span>/3";
+                                error.style.margin = "0px"
+                                error.style.marginLeft = "90%"
+                                error.style.width = "10%"
+
+                                respuesta.value = "";
+                                divFlechaBtn.style.visibility = 'hidden';
+
+                                Utils.fadeOut(containerBotones1)
+                                Utils.fadeOut(containerBotones2)
+                                Utils.fadeOut(containerBotones25)
+                                Utils.fadeOut(containerBotones3)
+
+                                fadeOut(containerBotones1)
+                                fadeOut(containerBotones2)
+                                fadeOut(containerBotones25)
+                                fadeOut(containerBotones3)
+
+                                Utils.fadeOut(Q1)
+                                Utils.fadeOut(Q2)
+                                Utils.fadeOut(Q25)
+                                Utils.fadeOut(Q3)
+
+                                fadeOut(Q1)
+                                fadeOut(Q2)
+                                fadeOut(Q25)
+                                fadeOut(Q3)
+
+                                Q1.style.visibility = "visible";
+                                progressBar.style.visibility = "visible";
+                                progressBar.style.pointerEvents = "all";
+                                containerBotones1.style.visibility = "visible";
+                                containerBotones1.style.pointerEvents = "all";
+                                sliderButton.style.transition = 'left 0.3s';
+                                sliderButton.style.transition = 'background-color 0.5s';
+
+
+                                console.log('DESLIZADO de nuevo');
+
+                                omiedo.style.opacity = "0"
+                                sliderCont.style.opacity = "0"
+                                pTextoP.style.opacity = "0"
+
+                                fadeOut(imglogo);
+                                fadeOut(tobravesouls);
+
+                                setTimeout(() => {
+                                    fadeOut(sliderCont);
+                                    fadeOut(omiedo);
+                                    fadeOut(pTextoP);
                                 }, 1000);
-                            }, 500);
-                        }, 1000);
+
+                                principalCont.style.backgroundColor = "#151515";
+
+
+                                //Empezar desde aquí
+                                setTimeout(function () {
+                                    saveState();
+                                    contInt++;
+
+                                    console.log(contInt)
+                                    resetTimer();
+                                    containerTimer.style.visibility = "visible";
+                                    mostrarQ1();
+                                }, 1000);
+                        }
+
                     } else {
                         sliderButton.style.left = '0px';
                     }
-                } else {
-
-                }
             }
         }
 
@@ -537,7 +616,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     fadeOut(sliderCont3)
                     principalCont.style.backgroundColor = "black"
                     setTimeout(() => {
-                        bgVideo.style.opacity = "0.2"
+                        bgVideo.style.opacity = "0.2";
+                        bgVideo.muted = true;
+                        bgVideo.play();
                     }, 1000);
                     fadeIn(draggablediv)
 
@@ -556,6 +637,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     llenarInput("inputP5", iguser.value)
                     submit.click();
+
+                    pTextoP.style.opacity = "0"
+                    IgBar.style.opacity = "0"
 
                     fadeOut(relax)
                     fadeOut(IgBar)
@@ -747,7 +831,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     fadeOut(thunder)
 
                     principalCont.style.backgroundColor = "#f22a2a"
-                    BeText.src = "img/Betxtwhite.png"
 
                     containerTimer.style.position = "absolute"
                     containerTimer.style.top = "14vh"
@@ -760,80 +843,79 @@ document.addEventListener('DOMContentLoaded', function () {
                         pTextoP.style.fontSize = "2vh"
                         pTextoP.style.color = "#ffffffbf"
                         pTextoP.style.transition = "ease-in-out 1s;"
-                        pTextoP.innerHTML = "<img style='height: 1.5vh' src='img/circus.png'> <span id='ey1'>EY,</span><span id='ey2'> EY</span><span id='ey3'> EY</span><span id='queE'> QUE</span><span id='pasoE'> PASÓ</span><br><br><span style='color: #ffffffbf' id='avisamosDSP'></span>"
+                        pTextoP.innerHTML = "<img style='height: 1.5vh' src='img/circus.png'> EY, EY EY QUE PASÓ<br><span id='avisamosDSP'></span>"
                         
-                        fadeIn(pTextoP)
+                        pTextoP.classList.remove('fade-out');
+                        pTextoP.classList.remove('hidden');
+                        pTextoP.style.opacity = "0"
+                        pTextoP.style.display = "block"
 
+                        pTextoP.style.transition = "opacity ease 1s";
                         setTimeout(function () {
-                            document.getElementById('ey1').style.color = "#ffffff";
+                            pTextoP.style.opacity = "1"
 
-                            setTimeout(function () {
-                                document.getElementById('ey1').style.color = "#ffffffbf";
-                                document.getElementById('ey2').style.color = "#ffffff";
+                            var textElement = document.getElementById('avisamosDSP');
+                            textElement.style.fontSize = "1.7vh"
 
-                                setTimeout(function () {
-                                    document.getElementById('ey2').style.color = "#ffffffbf";
-                                    document.getElementById('ey3').style.color = "#ffffff";
+                            restoreState();
 
-                                    setTimeout(function () {
-                                        document.getElementById('ey3').style.color = "#ffffffbf";
-                                        document.getElementById('queE').style.color = "#ffffff";
+                            setTimeout(() => {
+                                const textContent = "DESPUÉS NO DIGAS QUE NO TE AVISAMOS";
+                                let index = 0;
 
-                                        setTimeout(function () {
-                                            document.getElementById('queE').style.color = "#ffffffbf";
-                                            document.getElementById('pasoE').style.color = "#ffffff";
+                                function writeText() {
+                                    textElement.innerHTML = textContent.slice(0, index);
+                                    index++;
 
-                                            setTimeout(function () {
-                                                document.getElementById('pasoE').style.color = "#ffffffbf";
+                                    if (index <= textContent.length) {
+                                        setTimeout(writeText, 100);
+                                    }
+                                }
 
-                                                var textElement = document.getElementById('avisamosDSP');
-                                                textElement.style.fontSize = "1.7vh"
+                                writeText();
 
-                                                restoreState();
-
-                                                setTimeout(() => {
-                                                    const textContent = "DESPUÉS NO DIGAS QUE NO TE AVISAMOS";
-                                                    let index = 0;
-
-                                                    function writeText() {
-                                                        textElement.innerHTML = textContent.slice(0, index);
-                                                        index++;
-
-                                                        if (index <= textContent.length) {
-                                                            setTimeout(writeText, 100);
-                                                        }
-                                                    }
-
-                                                    writeText();
-
-                                                    textElement.classList.add('blinking');
+                                textElement.classList.add('blinking');
 
 
-                                                    setTimeout(() => {
-                                                        sliderButton.innerHTML = "CANGREJEAR"
-                                                        sliderContainer.style.position = "absolute"
-                                                        sliderContainer.style.top = "60vh"
-                                                        sliderButton.style.left = '0px';
-                                                        omiedo.style.position = "absolute"
-                                                        omiedo.style.top = "64vh"
-                                                        omiedo.style.fontSize = "1.3vh"
-                                                        omiedo.style.color = "#ffffffd0"
-                                                        omiedo.innerHTML = "NO SOMOS TU EX, PERO TE DAMOS<br>OTRA OPORTUNIDAD"
+                                setTimeout(() => {
+                                    sliderButton.innerHTML = "CANGREJEAR"
+                                    sliderContainer.style.position = "absolute"
+                                    sliderContainer.style.top = "60vh"
+                                    sliderButton.style.left = '0px';
+                                    omiedo.style.position = "absolute"
+                                    omiedo.style.top = "64vh"
+                                    omiedo.style.fontSize = "1.3vh"
+                                    omiedo.style.color = "#ffffffd0"
+                                    omiedo.innerHTML = "NO SOMOS TU EX, PERO TE DAMOS<br>OTRA OPORTUNIDAD"
 
-                                                        setTimeout(() => {
-                                                            fadeIn(sliderContainer)
-                                                            setTimeout(() => {
-                                                                fadeIn(omiedo)
-                                                            }, 1000);
-                                                        }, 1000);
-                                                    }, 3000);
-                                                }, 1000);
-                                            }, 400);
-                                        }, 400);
-                                    }, 400);
-                                }, 400);
-                            }, 400);
-                        }, 1000);
+                                    setTimeout(() => {
+                                        sliderContainer.classList.remove('fade-out');
+                                        sliderContainer.classList.remove('hidden');
+                                        sliderContainer.style.opacity = "0"
+                                        sliderContainer.style.display = "flex"
+                                        sliderContainer.style.transition = "opacity ease 1s";
+
+                                        setTimeout(() => {
+                                            sliderContainer.style.opacity = "1"
+                                        }, 200);
+                                                                                
+                                        setTimeout(() => {
+                                            omiedo.classList.remove('fade-out');
+                                            omiedo.classList.remove('hidden');
+                                            omiedo.style.opacity = "0"
+                                            omiedo.style.display = "flex"
+                                            omiedo.style.transition = "opacity ease 1s";
+                                        
+                                            setTimeout(() => {
+                                                omiedo.style.opacity = "1"
+                                            }, 200);
+
+                                        }, 1000);
+                                    }, 1000);
+                                }, 3000);
+                            }, 1000);
+                        }, 400);
+                        //EEEEEEEEE
                     }, 1000);
                 }
             }
@@ -859,11 +941,16 @@ document.addEventListener('DOMContentLoaded', function () {
         function verificarInput2() {
             scrollToTop();
             if (iguser.value === '') {
-                cursorP2.style.display = 'flex';
-                iguser.style.width = '80%'
+                setTimeout(() => {
+                    iguser.style.width = '80%'
+                }, 1000);
             } else {
                 cursorP2.style.display = 'none';
             }
+
+            iguser.addEventListener('focus', function () {
+                cursorP2.style.display = 'none';
+            });
         }
 
         verificarInput2();
@@ -931,80 +1018,96 @@ document.addEventListener('DOMContentLoaded', function () {
         pTextoP.style = "transform: rotate(0deg) scale(1, 1)"
         pTextoP.style.justifyContent = "center"
         pTextoP.innerHTML = "<img style='height: 2.5vh' src='img/bomb.png'> CRACK!"
-        Utils.fadeIn(pTextoP)
+        
+        setTimeout(() => {
+            Utils.fadeIn(pTextoP)
 
-        Qr4.innerHTML = generateCode();
-        timerIsActive = false
+            Qr4.innerHTML = generateCode();
+            timerIsActive = false
 
-        llenarInput("inputP4", Qr4.innerHTML)
+            llenarInput("inputP4", Qr4.innerHTML)
 
-        setTimeout(function () {
-            Utils.fadeOut(pTextoP)
-            principalCont.style.backgroundColor = "#151515"
-            BeText.src = "img/Betxt.png"
+            setTimeout(function () {
+                Utils.fadeOut(pTextoP)
+                principalCont.style.backgroundColor = "#151515"
+                BeText.src = "img/Betxt.png"
 
-            setTimeout(() => {
-                Utils.fadeIn(Q4)
                 setTimeout(() => {
-                    document.getElementById('tuS').style.color = "#ffffff"
+                    Utils.fadeIn(Q4)
                     setTimeout(() => {
-                        document.getElementById('tuS').style.color = "#525252"
-                        document.getElementById('suenoS').style.color = "#ffffff"
+                        document.getElementById('tuS').style.color = "#ffffff"
                         setTimeout(() => {
-                            document.getElementById('suenoS').style.color = "#525252"
-                            document.getElementById('estaS').style.color = "#ffffff"
+                            document.getElementById('tuS').style.color = "#525252"
+                            document.getElementById('suenoS').style.color = "#ffffff"
                             setTimeout(() => {
-                                document.getElementById('estaS').style.color = "#525252"
-                                document.getElementById('aS').style.color = "#ffffff"
+                                document.getElementById('suenoS').style.color = "#525252"
+                                document.getElementById('estaS').style.color = "#ffffff"
                                 setTimeout(() => {
-                                    document.getElementById('aS').style.color = "#525252"
-                                    document.getElementById('salvoS').style.color = "#ffffff"
+                                    document.getElementById('estaS').style.color = "#525252"
+                                    document.getElementById('aS').style.color = "#ffffff"
                                     setTimeout(() => {
-                                        document.getElementById('salvoS').style.color = "#525252"
-                                        document.getElementById('conS').style.color = "#ffffff"
+                                        document.getElementById('aS').style.color = "#525252"
+                                        document.getElementById('salvoS').style.color = "#ffffff"
                                         setTimeout(() => {
-                                            document.getElementById('conS').style.color = "#525252"
-                                            document.getElementById('nosotrosS').style.color = "#ffffff"
+                                            document.getElementById('salvoS').style.color = "#525252"
+                                            document.getElementById('conS').style.color = "#ffffff"
                                             setTimeout(() => {
-                                                document.getElementById('nosotrosS').style.color = "#525252"
+                                                document.getElementById('conS').style.color = "#525252"
+                                                document.getElementById('nosotrosS').style.color = "#ffffff"
                                                 setTimeout(() => {
-                                                    Utils.fadeOut(Q4)
-
-                                                    pTextoP.style.top = "25vh"
-                                                    pTextoP.innerHTML = "NOS VEMOS PRONTO... GUARDA<br> ESTE CÓDIGO, PUEDE SER LA<br> LLAVE PARA CUMPLIR TU SUEÑO ;)"
-                                                    pTextoP.style.fontSize = "1.7vh"
-                                                    Utils.fadeIn(pTextoP)
+                                                    document.getElementById('nosotrosS').style.color = "#525252"
                                                     setTimeout(() => {
-                                                        Utils.fadeIn(containerQR)
-                                                            Utils.fadeIn(Qr4)
-                                                            Utils.fadeIn(IgBar)
+                                                        Utils.fadeOut(Q4)
 
                                                         setTimeout(() => {
-                                                            IgBar.style.opacity = "1"
-                                                            function verificarInputIG() {
-                                                                if (iguser.value === '') {
-                                                                    Utils.fadeOut(sliderCont3)
-                                                                    sliderCont3.style.top = "-200vh"
-                                                                    setTimeout(() => {
-                                                                        sliderCont2.style.top = "75vh"
-                                                                        Utils.fadeIn(sliderCont2)
-                                                                    }, 5000);
-                                                                } else {
-                                                                    sliderCont2.style.top = "-200vh"
-                                                                    setTimeout(() => {
-                                                                        sliderCont3.style.top = "75vh"
-                                                                        Utils.fadeOut(sliderCont2)
-                                                                        Utils.fadeIn(sliderCont3)
-                                                                        Utils.fadeIn(relax)
-                                                                    }, 200);
-                                                                }
-                                                            }
+                                                            pTextoP.style.top = "25vh"
+                                                            pTextoP.innerHTML = "NOS VEMOS PRONTO... GUARDA<br> ESTE CÓDIGO, PUEDE SER LA<br> LLAVE PARA CUMPLIR TU SUEÑO ;)"
+                                                            pTextoP.style.fontSize = "1.7vh"
 
-                                                            verificarInputIG();
-                                                            iguser.addEventListener('input', verificarInputIG);
+                                                            pTextoP.classList.remove('fade-out');
+                                                            pTextoP.classList.remove('hidden');
+                                                            pTextoP.style.opacity = "0"
+                                                            pTextoP.style.display = "block"
+
+                                                            pTextoP.style.transition = "opacity ease 1s";
+
+                                                            setTimeout(() => {
+                                                                pTextoP.style.opacity = "1"
+                                                            }, 200);
+
+                                                            setTimeout(() => {
+                                                                Utils.fadeIn(containerQR)
+                                                                Utils.fadeIn(Qr4)
+                                                                Utils.fadeIn(IgBar)
+
+                                                                setTimeout(() => {
+                                                                    IgBar.style.opacity = "1"
+                                                                    function verificarInputIG() {
+                                                                        if (iguser.value === '') {
+                                                                            Utils.fadeOut(sliderCont3)
+                                                                            sliderCont3.style.top = "-200vh"
+                                                                            setTimeout(() => {
+                                                                                sliderCont2.style.top = "75vh"
+                                                                                Utils.fadeIn(sliderCont2)
+                                                                            }, 5000);
+                                                                        } else {
+                                                                            sliderCont2.style.top = "-200vh"
+                                                                            setTimeout(() => {
+                                                                                sliderCont3.style.top = "75vh"
+                                                                                Utils.fadeOut(sliderCont2)
+                                                                                Utils.fadeIn(sliderCont3)
+                                                                                Utils.fadeIn(relax)
+                                                                            }, 200);
+                                                                        }
+                                                                    }
+
+                                                                    verificarInputIG();
+                                                                    iguser.addEventListener('input', verificarInputIG);
+                                                                }, 1000);
+
+                                                            }, 1000);
                                                         }, 1000);
-                                                        
-                                                    }, 2000);
+                                                    }, 400);
                                                 }, 400);
                                             }, 400);
                                         }, 400);
@@ -1013,7 +1116,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             }, 400);
                         }, 400);
                     }, 400);
-                }, 400);
+                }, 1000);
             }, 1000);
         }, 1000);
 

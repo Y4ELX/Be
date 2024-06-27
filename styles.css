@@ -109,6 +109,10 @@ body {
     opacity: 1;
 }
 
+.fade-inPT {
+    opacity: 0;
+}
+
 #sabiamos,
 #que1,
 #dirias,
@@ -143,6 +147,7 @@ body {
     font-family: mn;
     font-size: 2.5vh;
     color: white;
+
     opacity: 0;
 }
 

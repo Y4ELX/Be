@@ -584,6 +584,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                                 //Empezar desde aquí
                                 setTimeout(function () {
+                                    BeText.src = "img/Betxt.png"
                                     saveState();
                                     contInt++;
 

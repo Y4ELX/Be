@@ -24,6 +24,19 @@
         }
     }
 
+    function onKeyboardOnOff(isOpen) {
+        // Write down your handling code
+        if (isOpen) {
+            // keyboard is open
+            $wrap.css({ opacity: 0 })
+                .find('.content').hide(); // trick the browser thinks the element is relatively top position... 
+            setTimeout(function () {
+                $wrap.css({ opacity: 1 })
+                    .find('.content').show();
+            }, 10);
+        }
+    }
+
     const Utils = {
         fadeOut: function (element) {
             element.classList.remove('fade-in');
@@ -161,22 +174,6 @@ document.addEventListener('DOMContentLoaded', function () {
         let isDragging2 = false; // Nuevo para el segundo slider
         let isDragging3 = false; // Nuevo para el segundo slider
 
-
-        window.onscroll = function () {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                document.getElementById("myBtn").style.display = "block";
-            } else {
-                document.getElementById("myBtn").style.display = "none";
-            }
-        };
-
-        function scrollToTop() {
-            console.log("SCROLL")
-
-            document.body.scrollTop = 0; // Para Safari
-            document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
-        }
-
         sliderButton.addEventListener('mousedown', startDragging);
         sliderButton.addEventListener('touchstart', startDragging);
 
@@ -206,6 +203,33 @@ document.addEventListener('DOMContentLoaded', function () {
         document.addEventListener('mousemove', drag3);
         document.addEventListener('touchmove', drag3);
 
+        $(document).on('touchstart', '.iguser', function (e) {
+            var intv = 100;
+            var $obj = $(this);
+
+            // Función para detectar el sistema operativo móvil
+            function getMobileOperatingSystem() {
+                var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+                if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                    return 'ios';
+                }
+
+                return 'unknown';
+            }
+
+            if (getMobileOperatingSystem() === 'ios') {
+                e.preventDefault();
+                e.stopPropagation();
+
+                $obj.css({ 'transform': 'translateY(-10000px)' }).focus();
+                setTimeout(function () {
+                    $obj.css({ 'transform': 'none' });
+                }, intv);
+            }
+
+            return true;
+        });
 
         const draggableDiv = document.getElementById('draggablediv');
         const handle = document.getElementById('handle');
@@ -927,7 +951,6 @@ document.addEventListener('DOMContentLoaded', function () {
         let intervalId = setInterval(moveFirstDivToEnd, 10);
 
         function verificarInput() {
-            scrollToTop();
             if (respuesta.value === '') {
                 divFlechaBtn.style.visibility = 'hidden';
             } else {
@@ -941,7 +964,6 @@ document.addEventListener('DOMContentLoaded', function () {
         
 
         function verificarInput2() {
-            scrollToTop();
             if (iguser.value === '') {
                 setTimeout(() => {
                     iguser.style.width = '80%'

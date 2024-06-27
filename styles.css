@@ -7,7 +7,7 @@ body {
     scroll-behavior: auto;
     margin: 0;
     width: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
     height: 100VH;
     background-color: #151515;
 }

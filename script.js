@@ -647,7 +647,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }, 1000);
 
                     document.body.style.overflow = 'hidden';
-                    fadeIn(draggablediv)
+                    fadeIn(draggablediv);
 
                 } else {
                     sliderButton2.style.left = '0px';
@@ -679,7 +679,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     principalCont.style.backgroundColor = "black"
                     setTimeout(() => {
                         bgVideo.style.opacity = "0.2"
-                    }, 1000);                    fadeIn(draggablediv)
+                    }, 1000);                    
+                    document.body.style.overflow = 'hidden';
+                    fadeIn(draggablediv)
                     sliderCont2.style.visibility = "hidden"
                     sliderContainer2.style.visibility = "hidden"
                     sliderCont3.style.visibility = "hidden"

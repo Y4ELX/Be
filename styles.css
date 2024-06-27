@@ -235,6 +235,10 @@ body {
     border-bottom: solid #ffafaf 0.2vh;
 }
 
+#bgVideo{
+    transition: opacity ease-in-out 2s;
+}
+
 .SQDQS{
     z-index: 5;
     width: 90%;

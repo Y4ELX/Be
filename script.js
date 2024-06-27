@@ -621,11 +621,17 @@ document.addEventListener('DOMContentLoaded', function () {
                     fadeOut(containerQR)
                     fadeOut(sliderCont2)
                     fadeOut(sliderCont3)
+
+                    bgVideo.classList.remove('fade-out');
+                    bgVideo.classList.remove('hidden');
+                    bgVideo.style.opacity = "0"
+                    bgVideo.style.display = "block"
+
+                    bgVideo.style.transition = "opacity ease 1s";
+                    
                     principalCont.style.backgroundColor = "black"
                     setTimeout(() => {
                         bgVideo.style.opacity = "0.2";
-                        bgVideo.muted = true;
-                        bgVideo.play();
                     }, 1000);
 
                     document.body.style.overflow = 'hidden';
@@ -658,7 +664,16 @@ document.addEventListener('DOMContentLoaded', function () {
                     fadeOut(containerQR)
                     fadeOut(sliderContainer3)
 
+                    bgVideo.classList.remove('fade-out');
+                    bgVideo.classList.remove('hidden');
+                    bgVideo.style.opacity = "0"
+                    bgVideo.style.display = "block"
+
+                    bgVideo.style.transition = "opacity ease 1s";
+
                     principalCont.style.backgroundColor = "black"
+
+
                     setTimeout(() => {
                         bgVideo.style.opacity = "0.2"
                     }, 1000);                    

@@ -870,7 +870,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         pTextoP.style.fontSize = "2vh"
                         pTextoP.style.color = "#ffffffbf"
                         pTextoP.style.transition = "ease-in-out 1s;"
-                        pTextoP.innerHTML = "<img style='height: 1.5vh' src='img/circus.png'> EY, EY EY QUE PASÓ<br><span id='avisamosDSP'></span>"
+                        pTextoP.innerHTML = "<img style='height: 1.5vh' src='img/circus.png'> EY, EY, EY, ¿QUÉ PASÓ?<br><span id='avisamosDSP'></span>"
                         
                         pTextoP.classList.remove('fade-out');
                         pTextoP.classList.remove('hidden');

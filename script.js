@@ -1074,6 +1074,7 @@ document.addEventListener('DOMContentLoaded', function () {
             timerIsActive = false
 
             llenarInput("inputP4", Qr4.innerHTML)
+            submit.click();
 
             setTimeout(function () {
                 Utils.fadeOut(pTextoP)
@@ -1167,8 +1168,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 }, 1000);
             }, 1000);
         }, 1000);
-
-        submit.click();
     }
 
     function generateCode() {

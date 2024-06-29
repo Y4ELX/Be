@@ -152,6 +152,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const containerTimerGlob = document.getElementById('containerTimer');
 
+        var notAudio = new Audio('img/ipNot.mp3');
+
+
         let isDragging = false;
         let isDragging2 = false; // Nuevo para el segundo slider
         let isDragging3 = false; // Nuevo para el segundo slider
@@ -794,6 +797,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (timer == 26000) {
                     textonoti.innerText = "Tic, tac, tic, tac ...."
+                    setTimeout(() => {
+                        notAudio.play();
+                    }, 500);
                     notif.style.top = "2vh"
                     setTimeout(() => {
                         notif.style.top = "-130vh"
@@ -802,6 +808,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (timer == 16000) {
                     textonoti.innerText = "Pilas pues! El tiempo se está acabandoooo"
+                    setTimeout(() => {
+                        notAudio.play();
+                    }, 500);
                     notif.style.top = "2vh"
                     setTimeout(() => {
                         notif.style.top = "-130vh"
@@ -810,6 +819,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (timer == 11000) {
                     textonoti.innerText = "Mucha pensadera, mucha pensaderaaa"
+                    setTimeout(() => {
+                        notAudio.play();
+                    }, 500);
                     notif.style.top = "2vh"
                     setTimeout(() => {
                         notif.style.top = "-130vh"
@@ -818,6 +830,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (timer == 6000) {
                     textonoti.innerText = "Me va a dar algo, métale metaleeee"
+                    setTimeout(() => {
+                        notAudio.play();
+                    }, 500);
                     notif.style.top = "2vh"
                     setTimeout(() => {
                         notif.style.top = "-130vh"
